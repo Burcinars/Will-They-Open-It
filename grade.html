@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Will They Open It · Grading</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1F1B24;--ink2:#4A4550;--page:#FBF8F3;--card:#FFFFFF;--line:#E6DED3;--blue:#D4E8FA;--blueInk:#2F5E8F;--mint:#D6F3E4;--mintInk:#2F6B4F;--peach:#FFE1CF;--peachInk:#8A4B1C;--butter:#FFF2B8;--gray:#F1EEEA}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font-family:'Hanken Grotesk',system-ui,Arial,sans-serif;font-size:18px;line-height:1.55}
+.wrap{max-width:1100px;margin:0 auto;padding:24px 20px 80px}
+h1{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:38px;margin:0 0 4px}
+h2{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:26px;margin:0 0 10px}
+.sub{color:var(--ink2);margin:0 0 18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 22px;margin:0 0 16px;box-shadow:0 1px 2px rgba(31,27,36,.05),0 8px 22px rgba(31,27,36,.06)}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:end}
+label{display:block;font-weight:700;font-size:15px;margin:0 0 4px}
+input[type=text],input[type=password],select{font:inherit;padding:9px 12px;border:2px solid #D6CCBF;border-radius:10px;background:#fff;min-width:200px}
+.btn{font:inherit;font-weight:700;border:0;border-radius:999px;padding:10px 20px;cursor:pointer;background:var(--ink);color:#fff}
+.btn.soft{background:var(--gray);color:var(--ink);border:1.5px solid #D6CCBF}
+.btn:disabled{opacity:.5;cursor:default}
+.msg{margin:10px 0 0;padding:10px 14px;border-radius:12px;background:var(--gray)}
+.msg.ok{background:var(--mint)}.msg.bad{background:var(--peach)}
+.stats{display:flex;gap:12px;flex-wrap:wrap}
+.stat{background:var(--gray);border-radius:14px;padding:10px 16px;min-width:130px}
+.stat .n{font-family:'Fraunces',Georgia,serif;font-size:30px;font-weight:700;line-height:1.1}
+.stat .l{font-size:14px;font-weight:700;color:var(--ink2)}
+.stu{border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:0 0 14px;background:#fff}
+.stu.none{background:#FAF8F5}
+.stuhead{display:flex;gap:10px 18px;flex-wrap:wrap;align-items:baseline;justify-content:space-between}
+.name{font-family:'Fraunces',Georgia,serif;font-size:22px;font-weight:700}
+.meta{color:var(--ink2);font-size:15px}
+.final{font-weight:800;background:var(--mint);border-radius:999px;padding:4px 14px}
+.final.changed{background:var(--butter)}
+.ans{display:grid;grid-template-columns:190px 1fr 150px;gap:6px 14px;align-items:center;padding:10px 0;border-top:1px dashed var(--line)}
+.ans:first-of-type{border-top:0}
+.ex{font-size:14px;font-weight:700;color:var(--ink2)}
+.said{font-size:19px}
+.said.empty{color:var(--ink2)}
+.wc{font-size:13px;color:var(--ink2)}
+.sc select{min-width:0;padding:6px 8px}
+.auto{font-size:13px;color:var(--ink2)}
+details.models summary{cursor:pointer;font-weight:700}
+.model{padding:8px 0;border-top:1px dashed var(--line)}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace}
+@media (max-width:760px){.ans{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Will They Open It · Grading</h1>
+<p class="sub">In Class Activity 4 · private page for Professor Calafiore · nothing here is shared with students</p>
+
+<div class="card">
+ <h2>1. Connect</h2>
+ <div class="row">
+  <div><label for="key">Instructor key</label><input type="password" id="key" autocomplete="off"></div>
+  <div><label for="section">Section</label><select id="section"><option value="13046">CRN 13046 · in person</option><option value="13901">CRN 13901 · live online</option></select></div>
+  <div><label for="activity">Activity</label><select id="activity"><option value="WTO1">WTO1 · Will They Open It</option><option value="WTO1-TEST">WTO1-TEST · test runs only</option></select></div>
+  <div><button class="btn" id="loadBtn">Load results</button></div>
+ </div>
+ <div id="connMsg" class="msg" style="display:none"></div>
+</div>
+
+<div class="card">
+ <h2>2. Roster</h2>
+ <p id="rosterState" class="meta">No roster yet.</p>
+ <p class="meta">Uses the roster already saved on this computer by the Northline dashboard. Or load a fresh Grade Center download (Work Offline → Download, comma delimited):</p>
+ <input type="file" id="rosterFile" accept=".csv,.txt,.xls">
+ <div id="rosterMsg" class="msg" style="display:none"></div>
+</div>
+
+<div class="card">
+ <h2>3. Summary</h2>
+ <div class="stats" id="stats"><div class="meta">Load results first.</div></div>
+</div>
+
+<div class="card">
+ <h2>4. Read the sentences</h2>
+ <p class="meta">Each student typed <b>5 short lines</b>. The page checked each one (0 to 3 points). Read them. If you disagree, change the score in the box. The final score updates, and your changes stay saved in this browser. The other 13 pages were tap pages (2 points each, half for a second try); the page scored those on its own.</p>
+ <details class="models"><summary>Show the 5 typed lines and one strong version of each</summary><div id="models"></div></details>
+ <div id="students" style="margin-top:14px"></div>
+ <div id="unmatched"></div>
+</div>
+
+<div class="card">
+ <h2>5. Blackboard upload file</h2>
+ <p class="meta">Points out of 41 become a <b>percent</b> (for example 35 of 41 = 85). The Grade Center column shows Percentage first, so the file carries percents, the same as the last activity. Students with no record are left <b>blank</b>, never zero. Decide zeros afterwards, and type them in the Grade Center.</p>
+ <div class="row">
+  <div style="flex:1"><label for="colHeader">Grade Center column header</label><input type="text" id="colHeader" style="width:100%" placeholder="In Class Activity 3 [Total Pts: 10 Percentage] |4763083"></div>
+  <div><button class="btn" id="bbBtn">Download upload file</button></div>
+  <div><button class="btn soft" id="recBtn">Download full records file</button></div>
+ </div>
+ <div id="exportMsg" class="msg" style="display:none"></div>
+</div>
+</div>
+
+<script>
+const SALT1 = "northline-ctstate-2026";
+const ENDPOINT_DEFAULT = "https://script.google.com/macros/s/AKfycbz8sy_FMZsIJuAOQOtbmRqBn-P03bvZCW-Dev7BEBSWBblCSi0RF1CMTMS39JCzWvTgOQ/exec";
+const MAX = 23;
+const TYPED = [{"where": "⏰ Timesheets email (part 1, subject line)", "long": "Dana needs to say: Timesheets are due Friday at 5 PM. A late timesheet means a late paycheck.", "limit": 10, "model": "Submit your timesheet by Friday 5 PM", "checks": ["Says the topic: timesheets", "Gives the one detail that matters: Friday, or the 5 PM deadline", "Fits on a phone: 10 words or fewer, no all caps, no !!!"]}, {"where": "🧊 Fridge cleanout email (part 1, subject line)", "long": "Dana needs to say: The kitchen fridge gets emptied Thursday at 6 PM. Anything left inside goes in the trash.", "limit": 10, "model": "Fridge cleanout Thursday 6 PM: take your food home", "checks": ["Says the topic: the fridge (or the kitchen)", "Gives the one detail that matters: Thursday, or 6 PM", "Fits on a phone: 10 words or fewer, no all caps, no !!!"]}, {"where": "🧾 Greeting to Jordan Lee (part 2, greeting)", "long": "Jordan Lee, the accountant for a new client. Never met. Pronouns unknown. No title on the card.", "limit": 6, "model": "Dear Jordan Lee,", "checks": ["Starts with Dear (a first email to someone you have never met)", "Uses the name: Jordan", "No guessed title: no Mr., Ms., Mrs., Sir, or Madam"]}];
+const OWN_RUNS = {};
+const $ = id => document.getElementById(id);
+function lsGet(k, d){ try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch(e){ return d; } }
+function lsSet(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
+function endpoint(){ return lsGet("nl_endpoint", ENDPOINT_DEFAULT); }
+function esc(s){ return String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c])); }
+function show(id, t, kind){ const el = $(id); el.style.display = ""; el.className = "msg" + (kind ? " " + kind : ""); el.innerHTML = t; }
+function hide(id){ $(id).style.display = "none"; }
+function words(s){ const m = String(s || "").trim().match(/\S+/g); return m ? m.length : 0; }
+function fmt(iso){ if(!iso) return ""; const d = new Date(iso); return isNaN(d) ? String(iso) : d.toLocaleString([], {month:"short", day:"numeric", hour:"numeric", minute:"2-digit"}); }
+function parseArr(x){ try { const v = typeof x === "string" ? JSON.parse(x) : x; return Array.isArray(v) ? v : []; } catch(e){ return []; } }
+async function sha256Hex(text){ const buf = new TextEncoder().encode(text); const h = await crypto.subtle.digest("SHA-256", buf); return Array.from(new Uint8Array(h)).map(b => b.toString(16).padStart(2, "0")).join(""); }
+function normalizeId(raw){ const s = String(raw || "").trim().toLowerCase(); const d = s.replace(/\D/g, ""); if(d.length === 8) return d; return s.split("@")[0].replace(/\s+/g, ""); }
+async function postOnce(payload, ms){
+  const ctrl = new AbortController(); const t = setTimeout(() => ctrl.abort(), ms);
+  try { const res = await fetch(endpoint(), {method:"POST", body:JSON.stringify(payload), signal:ctrl.signal, credentials:"omit", cache:"no-store"}); const txt = await res.text(); try { return JSON.parse(txt); } catch(e){ return {ok:false, error:"bad_response"}; } }
+  catch(e){ return {ok:false, error:(e && e.name === "AbortError") ? "timeout" : "network"}; }
+  finally { clearTimeout(t); }
+}
+async function post(payload){
+  payload.key = $("key").value.trim();
+  let r = null;
+  for(let a = 0; a < 3; a++){
+    r = await postOnce(payload, 60000);
+    if(r && (r.ok || (r.error !== "timeout" && r.error !== "network" && r.error !== "bad_response"))) return r;
+    await new Promise(res => setTimeout(res, 1200 + a * 800));
+  }
+  return r;
+}
+let rows = [], roster = [];
+function overKey(){ return "lio_over_" + $("activity").value + "_" + $("section").value; }
+function getOver(){ return lsGet(overKey(), {}); }
+function setOver(rid, k, v){ const o = getOver(); o[rid] = o[rid] || {}; if(v === "") delete o[rid][k]; else o[rid][k] = Number(v); lsSet(overKey(), o); }
+function tapPts(r){ const p = parseArr(r.practicePicks); const auto = autoTyped(r); let total = Number(r.score) || 0; return Math.max(0, total - auto.reduce((a, b) => a + b, 0)); }
+function typedPts(r){ const auto = autoTyped(r), o = (getOver()[String(r.recordId)] || {}); let t = 0; for(let k = 0; k < 5; k++){ t += (o[k] !== undefined ? o[k] : (auto[k] || 0)); } return t; }
+function autoTyped(r){ return parseArr(r.checkStatuses).map(s => { const m = String(s).match(/^(\d)/); return m ? Number(m[1]) : 0; }); }
+function finalOf(r){
+  if(!r || !r.submittedAt) return null;
+  const auto = autoTyped(r), o = (getOver()[String(r.recordId)] || {});
+  let total = Number(r.score) || 0;
+  for(let k = 0; k < 5; k++){ if(o[k] !== undefined){ total += o[k] - (auto[k] || 0); } }
+  return Math.max(0, Math.min(MAX, total));
+}
+function tenOf(f){ return f === null ? "" : String(Math.round(f / MAX * 100)); }
+async function load(){
+  hide("connMsg");
+  if(!$("key").value.trim()){ show("connMsg", "Type the instructor key first.", "bad"); return; }
+  lsSet("nl_key", $("key").value.trim()); lsSet("wto_section", $("section").value); lsSet("wto_activity", $("activity").value);
+  $("loadBtn").disabled = true; $("loadBtn").textContent = "Loading… (can take up to a minute)";
+  const r = await post({action:"results", activity:$("activity").value, section:$("section").value});
+  $("loadBtn").disabled = false; $("loadBtn").textContent = "Load results";
+  if(!r || !r.ok){ show("connMsg", "Could not load: " + esc(r && r.error) + (r && r.error === "unauthorized" ? " (the key was not accepted)" : ". Try again."), "bad"); return; }
+  rows = r.rows || [];
+  show("connMsg", "Loaded " + rows.length + " record" + (rows.length === 1 ? "" : "s") + " at " + new Date().toLocaleTimeString([], {hour:"numeric", minute:"2-digit"}) + ".", "ok");
+  await loadRosterFromStorage();
+}
+function parseCSV(text){
+  const out = []; let row = [], field = "", q = false;
+  for(let i = 0; i < text.length; i++){
+    const c = text[i];
+    if(q){ if(c === '"'){ if(text[i+1] === '"'){ field += '"'; i++; } else q = false; } else field += c; }
+    else { if(c === '"') q = true; else if(c === "," || c === "\t"){ row.push(field); field = ""; } else if(c === "\n"){ row.push(field); out.push(row); row = []; field = ""; } else if(c !== "\r") field += c; }
+  }
+  if(field || row.length){ row.push(field); out.push(row); }
+  return out.filter(r => r.some(x => String(x).trim() !== ""));
+}
+function decodeFile(buf){
+  const u8 = new Uint8Array(buf);
+  if(u8[0] === 0xFF && u8[1] === 0xFE) return new TextDecoder("utf-16le").decode(u8);
+  if(u8[0] === 0xFE && u8[1] === 0xFF) return new TextDecoder("utf-16be").decode(u8);
+  return new TextDecoder("utf-8").decode(u8);
+}
+$("rosterFile").addEventListener("change", ev => { const f = ev.target.files[0]; if(!f) return; const fr = new FileReader(); fr.onload = () => loadRosterText(decodeFile(fr.result)); fr.readAsArrayBuffer(f); });
+async function loadRosterText(text){
+  hide("rosterMsg");
+  const table = parseCSV(text.replace(/^﻿/, ""));
+  if(table.length < 2){ show("rosterMsg", "That does not look like a Grade Center download.", "bad"); return; }
+  const header = table[0].map(h => String(h).trim());
+  const idx = n => header.findIndex(h => h.toLowerCase() === n);
+  const iL = idx("last name"), iF = idx("first name"), iU = idx("username");
+  if(iU < 0){ show("rosterMsg", "No Username column found.", "bad"); return; }
+  const list = [];
+  for(let r = 1; r < table.length; r++){ const u = String(table[r][iU] || "").trim(); if(!u || /previewuser/i.test(u)) continue; list.push({last: iL >= 0 ? table[r][iL] : "", first: iF >= 0 ? table[r][iF] : "", username: u}); }
+  lsSet("nl_cols_" + $("section").value, header.filter(h => /\[Total Pts:/i.test(h)));
+  lsSet("nl_roster_" + $("section").value, list);
+  await installRoster(list, "file");
+}
+async function loadRosterFromStorage(){
+  const saved = lsGet("nl_roster_" + $("section").value, null);
+  const cols = lsGet("nl_cols_" + $("section").value, []);
+  const KNOWN = {"13046":"In Class Activity 3 [Total Pts: 10 Percentage] |4763083", "13901":"In Class Activity 3 [Total Pts: 10 Percentage] |4763086"};
+  const col = KNOWN[$("section").value] || cols.find(h => /activity 3|lay it out/i.test(h) && /\|\s*\d+\s*$/.test(h)) || "In Class Activity 3 [Total Pts: 10 Percentage]";
+  $("colHeader").value = col;
+  if(saved && saved.length) await installRoster(saved, "storage");
+  else { roster = []; $("rosterState").textContent = "No roster saved on this computer for " + $("section").value + ". Load a Grade Center download below."; paint(); }
+}
+async function installRoster(list, source){
+  for(const s of list){ s.h1 = await sha256Hex(SALT1 + "|" + normalizeId(s.username)); }
+  roster = list;
+  if($("key").value.trim()){
+    const r = await post({action:"match", h1s: roster.map(s => s.h1)});
+    if(r && r.ok && Array.isArray(r.h2s)) roster.forEach((s, i) => { s.h2 = r.h2s[i]; });
+    else show("rosterMsg", "Could not match the roster right now: " + esc(r && r.error) + ". Press Load results again.", "bad");
+  }
+  $("rosterState").textContent = roster.length + " students" + (source === "storage" ? " (saved on this computer)" : " (from your file)") + ".";
+  paint();
+}
+function joined(){
+  const byId = {}; rows.forEach(r => { byId[String(r.recordId)] = r; });
+  const used = new Set();
+  const list = roster.map(s => { const r = s.h2 ? byId[s.h2] : null; if(r) used.add(String(r.recordId)); return {s, r}; });
+  list.sort((a, b) => String(a.s.last || "").localeCompare(String(b.s.last || "")) || String(a.s.first || "").localeCompare(String(b.s.first || "")));
+  return {list, unmatched: rows.filter(r => !used.has(String(r.recordId)))};
+}
+function ansHTML(r){
+  const said = parseArr(r.checkAnswers), auto = autoTyped(r), o = getOver()[String(r.recordId)] || {};
+  return TYPED.map((t, k) => {
+    const txt = said[k] || "", n = words(txt), cur = o[k] !== undefined ? String(o[k]) : "";
+    const opts = ['<option value="">auto (' + (auto[k] || 0) + ')</option>'].concat([0,1,2,3].map(v => '<option value="' + v + '"' + (cur === String(v) ? " selected" : "") + '>' + v + '</option>')).join("");
+    return '<div class="ans"><div class="ex">' + (k+1) + '. ' + esc(t.where) + '<br><span class="wc">limit ' + t.limit + ' words</span></div>' +
+      '<div><div class="said' + (txt ? "" : " empty") + '">' + (txt ? esc(txt) : "(nothing typed)") + '</div><div class="wc">' + n + ' words</div></div>' +
+      '<div class="sc"><label style="font-size:13px">Score</label><select data-rid="' + esc(r.recordId) + '" data-k="' + k + '">' + opts + '</select></div></div>';
+  }).join("");
+}
+function paint(){
+  const {list, unmatched} = joined();
+  const sub = list.filter(j => j.r && j.r.submittedAt), st = list.filter(j => j.r && !j.r.submittedAt);
+  const finals = sub.map(j => finalOf(j.r));
+  const avg = finals.length ? finals.reduce((a, b) => a + b, 0) / finals.length : null;
+  $("stats").innerHTML = roster.length ?
+    '<div class="stat"><div class="n">' + roster.length + '</div><div class="l">on the roster</div></div>' +
+    '<div class="stat"><div class="n">' + sub.length + '</div><div class="l">finished</div></div>' +
+    '<div class="stat"><div class="n">' + st.length + '</div><div class="l">started, not finished</div></div>' +
+    '<div class="stat"><div class="n">' + (roster.length - sub.length - st.length) + '</div><div class="l">no record</div></div>' +
+    '<div class="stat"><div class="n">' + (avg === null ? "–" : tenOf(avg) + "%") + '</div><div class="l">class average</div></div>'
+    : '<div class="meta">' + rows.length + ' record' + (rows.length === 1 ? "" : "s") + ' loaded. Load a roster to see names.</div>';
+  $("students").innerHTML = list.map(({s, r}) => {
+    const name = esc((s.first || "") + " " + (s.last || ""));
+    if(!r) return '<div class="stu none"><div class="stuhead"><span class="name">' + name + '</span><span class="meta">No record. Check attendance before any zero.</span></div></div>';
+    if(!r.submittedAt) return '<div class="stu none"><div class="stuhead"><span class="name">' + name + '</span><span class="meta">Started ' + esc(fmt(r.startedAt)) + ', not finished. Record ' + esc(String(r.recordId).slice(0, 6).toUpperCase()) + '</span></div></div>';
+    const f = finalOf(r), changed = f !== Number(r.score);
+    return '<div class="stu"><div class="stuhead"><span class="name">' + name + '</span>' +
+      '<span class="meta">Started ' + esc(fmt(r.startedAt)) + ' · finished ' + esc(fmt(r.submittedAt)) + ' · ' + esc(r.minutes) + ' min · record ' + esc(String(r.recordId).slice(0, 6).toUpperCase()) + '</span>' +
+      '<span class="final' + (changed ? " changed" : "") + '">' + f + ' / 41 → ' + tenOf(f) + '%' + (changed ? ' (page said ' + esc(r.score) + ')' : '') + '</span></div><div class="meta" style="margin:6px 0 2px">Tap pages: ' + esc(tapPts(r)) + ' of 26 · typed lines: ' + esc(typedPts(r)) + ' of 15</div>' + ansHTML(r) + '</div>';
+  }).join("");
+  $("unmatched").innerHTML = unmatched.length ? '<h2 style="margin-top:18px">Records that match nobody on the roster (' + unmatched.length + ')</h2><p class="meta">Usually a typo in the 8 digit number, or a try by the professor. Line up the start time with the student who emails, then type that grade by hand.</p>' +
+    unmatched.map(r => '<div class="stu"><div class="stuhead"><span class="name mono">Record ' + esc(String(r.recordId).slice(0, 6).toUpperCase()) + (OWN_RUNS[String(r.recordId).slice(0, 6).toUpperCase()] ? ' · ' + esc(OWN_RUNS[String(r.recordId).slice(0, 6).toUpperCase()]) : '') + '</span><span class="meta">Started ' + esc(fmt(r.startedAt)) + (r.submittedAt ? ' · finished ' + esc(fmt(r.submittedAt)) : ' · not finished') + '</span>' + (r.submittedAt ? '<span class="final">' + finalOf(r) + ' / 41 → ' + tenOf(finalOf(r)) + '%</span>' : '') + '</div>' + (r.submittedAt ? ansHTML(r) : '') + '</div>').join("") : "";
+  document.querySelectorAll("select[data-rid]").forEach(sel => sel.addEventListener("change", () => { setOver(sel.dataset.rid, sel.dataset.k, sel.value); paint(); }));
+}
+function csvField(v){ const s = String(v == null ? "" : v); return '"' + s.replace(/"/g, '""') + '"'; }
+function dl(name, text){ const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([text], {type:"text/csv;charset=utf-8"})); a.download = name; document.body.appendChild(a); a.click(); a.remove(); }
+$("bbBtn").addEventListener("click", () => {
+  hide("exportMsg");
+  if(!roster.length){ show("exportMsg", "Load the roster for this section first.", "bad"); return; }
+  const header = $("colHeader").value.trim() || "In Class Activity 3 [Total Pts: 10 Percentage]";
+  const {list} = joined(); let filled = 0, blank = 0;
+  const lines = [["Last Name", "First Name", "Username", header].map(csvField).join(",")];
+  list.forEach(({s, r}) => { let v = ""; if(r && r.submittedAt){ v = tenOf(finalOf(r)); filled++; } else blank++; lines.push([s.last, s.first, s.username, v].map(csvField).join(",")); });
+  dl("BUSN 2100 CRN " + $("section").value + " · Activity 3 upload · " + new Date().toISOString().slice(0, 10) + ".csv", lines.join("\r\n") + "\r\n");
+  show("exportMsg", "File created: " + filled + " grades (as percents), " + blank + " left blank. Upload it ONE time, into the empty In Class Activity 3 column, after the activity closes.", "ok");
+});
+$("recBtn").addEventListener("click", () => {
+  const {list, unmatched} = joined();
+  const head = ["Last Name", "First Name", "Username", "Record", "Started", "Finished", "Minutes", "Page score /41", "Final /41", "Final %", "Tap pages /26"].concat(TYPED.map((t, k) => "Line " + (k+1))).concat(TYPED.map((t, k) => "Score " + (k+1)));
+  const lines = [head.map(csvField).join(",")];
+  const add = (s, r) => { const said = parseArr(r && r.checkAnswers), auto = r ? autoTyped(r) : [], o = r ? (getOver()[String(r.recordId)] || {}) : {};
+    lines.push([s ? s.last : "", s ? s.first : "", s ? s.username : "", r ? String(r.recordId).slice(0, 6).toUpperCase() : "", r ? r.startedAt : "", r ? (r.submittedAt || "") : "", r ? r.minutes : "", r ? r.score : "", r && r.submittedAt ? finalOf(r) : "", r && r.submittedAt ? tenOf(finalOf(r)) : "", r && r.submittedAt ? tapPts(r) : ""]
+      .concat(TYPED.map((t, k) => said[k] || "")).concat(TYPED.map((t, k) => r && r.submittedAt ? (o[k] !== undefined ? o[k] : (auto[k] || 0)) : "")).map(csvField).join(",")); };
+  list.forEach(({s, r}) => add(s, r)); unmatched.forEach(r => add(null, r));
+  dl("BUSN 2100 CRN " + $("section").value + " · Activity 3 records · " + new Date().toISOString().slice(0, 10) + ".csv", lines.join("\r\n") + "\r\n");
+});
+$("models").innerHTML = TYPED.map((t, k) => '<div class="model"><b>' + (k+1) + '. ' + esc(t.where) + '</b> (limit ' + t.limit + ' words)<br>Long version: ' + esc(t.long) + '<br>One strong version: <b>' + esc(t.model) + '</b><br><span class="meta">Checks: ' + t.checks.map(esc).join(" · ") + '</span></div>').join("");
+$("loadBtn").addEventListener("click", load);
+$("section").addEventListener("change", () => { lsSet("wto_section", $("section").value); rows = []; roster = []; paint(); if($("key").value.trim()) load(); });
+$("activity").addEventListener("change", () => { lsSet("wto_activity", $("activity").value); if($("key").value.trim()) load(); });
+(function boot(){
+  try { const h = new URLSearchParams(location.hash.slice(1)); if(h.get("key")) lsSet("nl_key", h.get("key").trim()); if(h.get("s")) lsSet("wto_section", h.get("s").trim()); if(location.hash) history.replaceState(null, "", location.pathname + location.search); } catch(e){}
+  $("key").value = lsGet("nl_key", ""); $("section").value = lsGet("wto_section", "13046"); $("activity").value = lsGet("wto_activity", "WTO1");
+  paint();
+  if($("key").value.trim()) load();
+})();
+</script>
+</body>
+</html>

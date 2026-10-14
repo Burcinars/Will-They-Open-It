@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Will They Open It? · Subject lines and greetings</title>
+<style>
+
+
+
+
+
+:root{
+  --ink:#1F1B24;--ink2:#4A4550;--muted:#6B6570;
+  --page:#FBF8F3;--card:#FFFFFF;--line:#E6DED3;--line2:#D6CCBF;
+  --blue:#D4E8FA;--blueInk:#2F5E8F;--blueEdge:#7FAEDD;
+  --mint:#D6F3E4;--mintInk:#2F6B4F;--mintEdge:#6FB592;
+  --peach:#FFE1CF;--peachInk:#8A4B1C;--peachEdge:#E3A47A;
+  --note:#EEF1F5;--noteEdge:#A9B6C6;
+  --r:18px;
+  --shadow:0 1px 2px rgba(31,27,36,.06),0 8px 24px rgba(31,27,36,.07);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--page);color:var(--ink);font-family:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;font-size:20px;line-height:1.6;letter-spacing:.005em;-webkit-font-smoothing:antialiased}
+h1,h2{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.15;margin:0 0 .4em;letter-spacing:-.005em}
+h1{font-size:40px}h2{font-size:32px}
+p{margin:0 0 .7em}
+b{font-weight:700}
+button{font-family:inherit;color:inherit}
+
+/* top */
+.top{position:sticky;top:0;z-index:40;background:var(--page);border-bottom:1px solid var(--line)}
+.top-in{max-width:820px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces';font-weight:600;font-size:21px;line-height:1.15}
+.brand small{display:block;font-family:'Hanken Grotesk';font-weight:600;font-size:14px;color:var(--ink2)}
+.progress{flex:1;min-width:140px;display:flex;align-items:center;gap:10px}
+.bar{flex:1;height:10px;border-radius:999px;background:#E9E3DA;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--mintInk);border-radius:999px;transition:width .4s ease}
+.pcount{font-size:14px;font-weight:700;color:var(--ink2);white-space:nowrap}
+.points{background:#FFF2B8;border:1.5px solid #E6CF6A;color:#5C4600;border-radius:999px;padding:3px 12px;font-weight:700;font-size:15px;white-space:nowrap}
+.points.bump{animation:bump .5s ease}
+@keyframes bump{0%{transform:scale(1)}40%{transform:scale(1.18)}100%{transform:scale(1)}}
+.sampletag{font-size:13.5px;font-weight:600;color:var(--ink2);background:#EFEAE3;border-radius:999px;padding:3px 10px;white-space:nowrap}
+
+/* page */
+.wrap{max-width:820px;margin:0 auto;padding:22px 20px 150px}
+#page{animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.kindbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.kpill{border-radius:999px;padding:4px 14px;font-weight:700;font-size:15.5px;border:1.5px solid rgba(0,0,0,.12)}
+.exlabel{font-weight:700;font-size:15.5px;color:var(--ink2)}
+.rule{background:#fff;border:1.5px dashed var(--line2);border-radius:14px;padding:8px 14px;font-size:17px;margin-bottom:14px}
+.where{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;margin:0 0 12px}
+.wtag{font-weight:700;font-size:18px}
+.wreader{font-size:16.5px;color:var(--ink2)}
+
+/* job box */
+.job{background:var(--blue);border:2px solid var(--blueEdge);border-left:8px solid var(--blueInk);border-radius:16px;padding:12px 16px 12px;margin:0 0 16px}
+.jobhead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px}
+.jobtitle{font-weight:800;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--blueInk)}
+.steps{list-style:none;margin:0;padding:0}
+.steps li{display:flex;gap:10px;align-items:flex-start;padding:5px 8px;border-radius:10px;font-size:19px;line-height:1.45}
+.steps li .n{flex:none;width:28px;height:28px;border-radius:50%;background:#fff;border:2px solid var(--blueInk);color:var(--blueInk);font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.steps li.now{background:#fff;font-weight:700;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.steps li.now .n{background:var(--blueInk);color:#fff}
+.steps li.did{color:var(--ink2)}
+.steps li.did .n{background:var(--mintInk);border-color:var(--mintInk);color:#fff}
+.jobnote{font-size:16.5px;color:var(--ink2);margin:6px 0 0 8px}
+.listen{border:1.5px solid var(--blueEdge);background:#fff;border-radius:999px;padding:3px 12px;font-size:15px;font-weight:700;cursor:pointer}
+
+/* sentence card */
+.sentcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:16px 18px 14px;margin:0 0 14px}
+.sentlabel{font-size:15px;font-weight:700;color:var(--ink2);margin-bottom:6px}
+.sentlabel .carry{background:#EFEAE3;border-radius:999px;padding:1px 10px;margin-left:6px;font-weight:700}
+.sent{font-size:25px;line-height:2.05;margin:0}
+.chunk{font:inherit;font-size:25px;line-height:1.5;display:inline;background:#FAF8F5;border:2px dashed #C9BFB1;border-radius:10px;padding:1px 7px;margin:0 1px;cursor:pointer;-webkit-box-decoration-break:clone;box-decoration-break:clone;transition:background .2s,border-color .2s,transform .2s;color:var(--ink);text-align:left}
+.chunk:hover{background:#F1ECE4;border-color:#9E9384}
+.chunk:focus-visible{outline:3px solid var(--blueInk);outline-offset:2px}
+.chunk.sel{background:#E6DDF8;border:2px solid #5C4A9E}
+.chunk.fixed{background:var(--mint);border:2px solid var(--mintEdge);cursor:default}
+.chunk.shake{animation:shake .4s ease}
+@keyframes shake{0%,100%{transform:none}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.chunk.leaving{transition:transform .45s ease,opacity .45s ease;transform:translateY(-22px) scale(.75) rotate(-4deg);opacity:0}
+.chunk.pop{animation:pop .5s ease}
+@keyframes pop{0%{transform:scale(.85)}60%{transform:scale(1.08)}100%{transform:scale(1)}}
+.chunk[disabled]{cursor:default}
+.plain{font-size:25px}
+.punct{font-size:25px}
+.tapnote{font-size:15.5px;color:var(--ink2);margin:6px 0 0}
+.counts{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;align-items:center}
+.cnt{border-radius:999px;padding:4px 12px;font-weight:700;font-size:16px;background:#F1EEEA;color:var(--ink2)}
+.cnt.now{background:var(--mint);color:var(--mintInk)}
+.cnt.over{background:var(--peach);color:var(--peachInk)}
+.cnt.same{background:#F1EEEA;color:var(--ink2)}
+.bin{border-radius:999px;padding:4px 12px;font-weight:700;font-size:16px;background:#fff;border:1.5px dashed var(--line2);color:var(--ink2)}
+
+/* tiles */
+.tilezone{margin:4px 0 14px}
+.tilehead{font-weight:700;font-size:16.5px;color:var(--ink2);margin-bottom:8px}
+.tiles{display:flex;flex-wrap:wrap;gap:10px}
+.tile{background:#fff;border:2.5px solid var(--ink);border-radius:14px;padding:9px 16px;font-weight:700;font-size:21px;cursor:pointer;box-shadow:0 3px 0 var(--ink);line-height:1.3;min-height:48px}
+.tile:hover{background:#FFFBEF}
+.tile:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink)}
+.tile:focus-visible{outline:3px solid var(--blueInk);outline-offset:2px}
+.tile.wrong{border-color:var(--peachEdge);box-shadow:0 3px 0 var(--peachEdge);color:var(--peachInk);background:var(--peach)}
+.tile.used{visibility:hidden}
+.flyer{position:fixed;z-index:300;pointer-events:none;transition:transform .5s cubic-bezier(.3,.8,.3,1),opacity .5s ease;display:flex;align-items:center;justify-content:center;background:#fff;border:2.5px solid var(--ink);border-radius:14px;font-weight:700;font-size:20px;white-space:nowrap;overflow:hidden;box-shadow:0 10px 24px rgba(31,27,36,.2)}
+.flyer.cutfly{background:#FAF8F5;border-style:dashed;border-color:#C9BFB1;font-weight:400}
+
+/* build */
+.answer{min-height:64px;border:2.5px dashed var(--blueEdge);border-radius:16px;background:#F7FBFF;padding:10px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+.answer .ph{color:var(--muted);font-size:17px;padding:4px 6px}
+.answer .tile{font-size:20px}
+.bank{display:flex;flex-wrap:wrap;gap:10px;min-height:56px}
+.btnrow{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:4px 0 14px}
+
+/* type */
+.longv{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px 18px;margin:0 0 14px;box-shadow:var(--shadow)}
+.longv .sent{font-size:22px;line-height:1.6}
+textarea{width:100%;font:inherit;font-size:21px;line-height:1.6;padding:12px 14px;border-radius:14px;border:2.5px solid var(--line2);background:#fff;color:var(--ink);resize:vertical;min-height:120px}
+textarea:focus{outline:none;border-color:var(--blueInk);box-shadow:0 0 0 4px rgba(47,94,143,.18)}
+textarea[readonly]{background:#F3F0EB}
+.checks{margin:6px 0 12px}
+.check{display:flex;gap:10px;align-items:flex-start;border-radius:14px;padding:10px 14px;margin-bottom:8px;font-size:18.5px}
+.check.pass{background:var(--mint)}
+.check.fail{background:var(--peach)}
+.check .ic{font-size:21px;line-height:1.3;flex:none}
+details.model{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin:10px 0}
+details.model summary{cursor:pointer;font-weight:800}
+.small{font-size:16px;color:var(--ink2)}
+
+/* choose */
+.opts{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.opt{display:flex;gap:12px;align-items:flex-start;text-align:left;background:#fff;border:2.5px solid var(--line2);border-radius:16px;padding:12px 16px;font-size:21px;line-height:1.45;cursor:pointer;box-shadow:0 2px 0 var(--line2)}
+.opt:hover{border-color:var(--ink)}
+.opt .letter{flex:none;width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:17px;margin-top:2px}
+.opt.right{background:var(--mint);border-color:var(--mintEdge)}
+.opt.wrong{background:var(--peach);border-color:var(--peachEdge)}
+
+/* spot */
+.spotgrid{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 4px}
+.spotchip{font:inherit;font-size:21px;background:#FAF8F5;border:2px dashed #C9BFB1;border-radius:14px;padding:8px 14px;cursor:pointer;min-height:48px;color:var(--ink)}
+.spotchip:hover{background:#F1ECE4}
+.spotchip.picked{background:#E6DDF8;border:2px solid #5C4A9E;font-weight:700}
+.spotchip.isbad{text-decoration:line-through;text-decoration-thickness:3px;text-decoration-color:#4A4550;color:#6B6570;background:#fff;border:2px solid var(--line2);cursor:default}
+.spotchip.isok{background:#fff;border:2px solid var(--line);cursor:default}
+.why{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 16px;margin:0 0 14px}
+.whyrow{margin:4px 0;font-size:18.5px}
+/* feedback */
+.fb{border-radius:16px;padding:12px 16px;margin:0 0 14px;border-left:8px solid;font-size:19px;line-height:1.5}
+.fb.good{background:var(--mint);border-color:var(--mintEdge)}
+.fb.miss{background:var(--peach);border-color:var(--peachEdge)}
+.fb.note{background:var(--note);border-color:var(--noteEdge)}
+.fb .next{display:block;margin-top:4px;font-weight:700}
+.thought{display:flex;align-items:flex-end;gap:10px;margin:4px 0 16px}
+.face{font-size:34px;line-height:1;flex:none}
+.tcloud{position:relative;background:#fff;border:2.5px solid var(--ink);border-radius:30px;padding:10px 16px;font-weight:700;font-size:18.5px;line-height:1.35;box-shadow:var(--shadow);margin-bottom:14px}
+.tcloud .who{display:block;font-size:13.5px;font-weight:700;color:var(--muted);margin-bottom:2px;letter-spacing:.02em}
+.tcloud i{position:absolute;background:#fff;border:2.5px solid var(--ink);border-radius:50%}
+.tcloud i.b1{width:14px;height:14px;left:-6px;bottom:-12px}
+.tcloud i.b2{width:8px;height:8px;left:-16px;bottom:-22px}
+
+/* learn */
+.band{border-radius:20px;padding:16px 20px;margin:0 0 16px}
+.band h1{margin:0}
+.band .kicker{font-weight:800;font-size:15px;letter-spacing:.06em;text-transform:uppercase;opacity:.85;margin-bottom:4px}
+.lrow{margin:0 0 14px;font-size:21px;line-height:1.55}
+.lrow b.lab{display:inline-block;margin-right:4px}
+.example{display:grid;gap:10px;margin:0 0 16px}
+.exrow{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 16px;box-shadow:var(--shadow)}
+.exrow .exlab{font-size:15px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin-bottom:2px}
+.exrow .exs{font-size:24px;line-height:1.5}
+.exrow.after{border:2px solid var(--mintEdge)}
+.xpart{text-decoration:line-through;text-decoration-thickness:3px;text-decoration-color:#4A4550;color:#7A7068}
+.npart{background:var(--mint);border-radius:6px;padding:0 5px;font-weight:700}
+.cheat{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
+.cheat span{background:#fff;border:1.5px solid var(--line2);border-radius:12px;padding:5px 12px;font-size:18px}
+.sticky{background:#FFF2B8;border:1px solid #E6CF6A;border-radius:6px;padding:16px 20px;box-shadow:0 10px 20px rgba(31,27,36,.12);transform:rotate(-1.2deg);max-width:560px;margin:6px 0 20px;font-size:21px;line-height:1.5}
+.sticky .sig{display:block;text-align:right;font-weight:700;margin-top:6px}
+.how{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px 20px;box-shadow:var(--shadow);margin-bottom:16px}
+.how ol{margin:6px 0 0;padding-left:26px}
+.how li{margin-bottom:6px}
+.review{display:grid;gap:10px;margin:0 0 16px}
+.rv{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 16px;box-shadow:var(--shadow);border-left:8px solid}
+.rv .rvname{font-weight:800;font-size:18px}
+.rv .rvrule{font-size:17px;color:var(--ink2)}
+.rv .rvex{font-size:19px;margin-top:4px}
+.bigscore{font-family:'Fraunces';font-weight:700;font-size:34px;margin:4px 0 12px}
+
+/* nav */
+.nav{position:fixed;left:0;right:0;bottom:0;background:var(--page);border-top:1px solid var(--line);z-index:45}
+.nav-in{max-width:820px;margin:0 auto;padding:10px 20px;display:flex;gap:12px;align-items:center}
+.btn{border:0;border-radius:999px;padding:12px 24px;font-weight:700;cursor:pointer;font-size:18px;line-height:1.2;min-height:48px;white-space:nowrap}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.primary:disabled{background:#BDB6AE;cursor:not-allowed}
+.btn.ghost{background:#fff;border:2px solid var(--ink)}
+.btn.ghost:disabled{opacity:.35;cursor:not-allowed}
+.btn.soft{background:#F1EEEA;border:1.5px solid var(--line2)}
+.btn.blue{background:var(--blueInk);color:#fff}
+.btn.blue:disabled{background:#AFC3D8;cursor:not-allowed}
+.navmsg{margin-left:auto;color:var(--ink2);font-size:16px;font-weight:700;text-align:right;line-height:1.3}
+
+
+/* class version */
+.who{display:flex;justify-content:space-between;gap:6px 12px;flex-wrap:wrap;font-size:15px;font-weight:600;color:var(--ink2);background:#fff;border:1px solid var(--line);border-radius:12px;padding:6px 12px;margin:0 0 14px}
+.modebox{background:#fff;border:2px solid var(--blueEdge);border-radius:var(--r);padding:18px 20px;box-shadow:var(--shadow);margin:8px 0 18px}
+.modebox.signed{border-color:var(--mintEdge);background:var(--mint)}
+.modehead{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:26px;margin-bottom:10px}
+.btn.wide{width:100%;white-space:normal;text-align:center}
+.modenote{margin:6px 0 16px}
+.linkbtn{background:none;border:0;padding:0;font:inherit;font-weight:700;color:var(--blueInk);text-decoration:underline;cursor:pointer;text-align:left}
+.signstep{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px 18px;margin-bottom:14px;box-shadow:var(--shadow)}
+.stephead{display:flex;align-items:center;gap:10px;font-weight:700;margin-bottom:8px;line-height:1.35}
+.sn{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--blueInk);color:#fff;font-size:17px;flex:0 0 32px}
+.secrow{display:flex;gap:10px;flex-wrap:wrap}
+.secbtn{flex:1 1 220px;text-align:left;background:#fff;border:2px solid var(--line2);border-radius:14px;padding:10px 14px;cursor:pointer;font-size:19px;line-height:1.35}
+.secbtn span{display:block;font-size:15px;color:var(--ink2)}
+.secbtn.on{border-color:var(--blueInk);background:var(--blue)}
+.secbtn.on b::before{content:'✓ '}
+.field{width:100%;font:inherit;font-size:24px;letter-spacing:.06em;padding:10px 14px;border:2px solid var(--line2);border-radius:12px;background:#fff;color:var(--ink)}
+.field:focus{outline:3px solid var(--blueEdge);outline-offset:1px}
+.field[readonly]{background:#F4F1EC}
+.err{color:var(--peachInk);font-weight:700;margin:4px 0 10px}
+.err:empty{display:none}
+.confirm{background:var(--blue);border:2px solid var(--blueEdge);border-radius:var(--r);padding:16px 18px;margin-bottom:14px}
+.bigid{font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:38px;letter-spacing:.08em;line-height:1.2}
+@media (max-width:600px){
+  body{font-size:19px}
+  h1{font-size:32px}h2{font-size:27px}
+  .sent,.chunk,.plain,.punct{font-size:22px}
+  .brand{font-size:18px}
+  .sampletag{display:none}
+  .btn{padding:11px 18px;font-size:17px}
+  .navmsg{font-size:14.5px}
+  .tile{font-size:19px}
+}
+@media (max-width:480px){.navmsg{display:none}.nav-in{justify-content:space-between}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* lay it out additions */
+.ctx{font-size:23px;line-height:1.6}
+.ctx .cl{padding:1px 0}
+.ctx .cl.odd{background:#FFE1CF;border-radius:8px;padding:1px 8px;margin:2px -8px;box-shadow:0 0 0 2px #E3A47A inset}
+.ctx .cl.slot{border:2.5px dashed var(--blueEdge);border-radius:10px;color:var(--muted);font-size:18px;padding:4px 10px;margin:4px 0;background:#F7FBFF}
+.ctx .cl.new{background:var(--mint);border-radius:8px;padding:1px 8px;margin:2px -8px;font-weight:700}
+.ctx.wall{font-size:20px;line-height:1.55;background:#F6F2E9;border:1px solid #E3DCCB;border-radius:12px;padding:12px 16px}
+.ctxnote{font-size:18.5px;margin:10px 0 0;color:var(--ink2);font-weight:600}
+.exl{padding:1px 0}
+.exl b.hd{font-weight:800}
+.spotgrid.rows{flex-direction:column;flex-wrap:nowrap;align-items:stretch}
+.spotchip.row{text-align:left;width:100%;line-height:1.4}
+.spotchip.locked{cursor:default;background:#fff;border:2px solid var(--line)}
+.spotchip.istopic{background:var(--blue);border:2px solid var(--blueEdge);font-weight:700;cursor:default}
+.tflag{display:inline-block;background:var(--blueInk);color:#fff;border-radius:999px;font-size:13.5px;font-weight:700;padding:1px 10px;margin-right:8px;vertical-align:middle}
+.leadline{font-size:21px;color:var(--ink)}
+.answer.aslist{flex-direction:column;align-items:stretch;flex-wrap:nowrap}
+.answer.aslist .bl{display:flex;align-items:center;gap:10px}
+.answer.aslist .mk,.fl .mk,.eli .mk{flex:none;min-width:26px;font-weight:800}
+.answer.aslist .tile{text-align:left}
+.answer.aslist.final{border-style:solid;border-color:var(--mintEdge);background:var(--mint)}
+.fl{display:flex;gap:10px;font-size:23px;line-height:1.5}
+.email{display:grid;gap:8px;font-size:19.5px;line-height:1.5}
+.eline{padding:0 4px}
+.eblock{border-radius:14px;border:2px solid;padding:10px 14px;transition:opacity .3s}
+.eblock.dim{opacity:.35}
+.ehead{font-size:21px;font-weight:800;margin-bottom:2px}
+.eli{display:flex;gap:8px}
+.oddline{background:#fff;border-radius:6px;padding:0 6px;box-shadow:0 0 0 2px #E3A47A}
+textarea.short{min-height:76px}
+.opt b{font-weight:800}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="brand">
+      <svg width="32" height="32" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#D4E8FA" stroke="#2F5E8F" stroke-width="1.5"/><rect x="9" y="9.5" width="16" height="3.6" rx="1.8" fill="#2F5E8F"/><circle cx="10.6" cy="18" r="1.6" fill="#2F5E8F"/><rect x="14" y="16.6" width="11" height="2.8" rx="1.4" fill="#5E8DBB"/><circle cx="10.6" cy="23.6" r="1.6" fill="#2F5E8F"/><rect x="14" y="22.2" width="9" height="2.8" rx="1.4" fill="#5E8DBB"/></svg>
+      <div>Will They Open It?<small>Brightwater Insurance · Subject lines and greetings</small></div>
+    </div>
+    <div class="progress"><div class="bar" aria-hidden="true"><i id="barFill"></i></div><span class="pcount" id="pcount"></span></div>
+    <span class="points" id="points">⭐ 0 points</span>
+    <span class="sampletag" id="modetag" style="display:none">Practice</span>
+  </div>
+</header>
+<main class="wrap"><div id="page"></div></main>
+<nav class="nav" aria-label="Pages">
+  <div class="nav-in">
+    <button class="btn ghost" id="back" type="button">‹ Back</button>
+    <span class="navmsg" id="navmsg"></span>
+    <button class="btn primary" id="next" type="button">Next ➤</button>
+  </div>
+</nav>
+
+<script>
+(function(){
+'use strict';
+var $ = function(s, r){ return (r || document).querySelector(s); };
+var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+function words(s){ var m = String(s).trim().match(/\S+/g); return m ? m.length : 0; }
+function cap(s){ return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+function clone(o){ return JSON.parse(JSON.stringify(o)); }
+
+/* ================= CLASS VERSION (recording) ================= */
+var CONFIG = {
+  ENDPOINT: 'https://script.google.com/macros/s/AKfycbz8sy_FMZsIJuAOQOtbmRqBn-P03bvZCW-Dev7BEBSWBblCSi0RF1CMTMS39JCzWvTgOQ/exec',
+  SALT1: 'northline-ctstate-2026',
+  ACTIVITY: 'WTO1',
+  VERSION: 'wto1-2026-10-14a',
+  SECTIONS: {'13046': {label:'CRN 13046', sub:'In person · Mon/Wed 12:30'}, '13901': {label:'CRN 13901', sub:'Live online · Mon/Wed 5:30'}}
+};
+var QS = (function(){ try { return new URLSearchParams(location.search); } catch(e){ return {get:function(){ return null; }}; } })();
+if (QS.get('test') === '1') CONFIG.ACTIVITY += '-TEST';
+var PRESET = CONFIG.SECTIONS[QS.get('s')] ? QS.get('s') : null;
+var STORE_KEY = 'willtheyopenit_' + CONFIG.ACTIVITY;
+function newCls(){ return {mode:null, section:PRESET, h1:null, tail:'', code:'', recordId:null, startedAt:null, unverified:false, submitted:null, submitError:null, submitting:false}; }
+function isClass(){ return !!(st && st.cls && st.cls.mode === 'class'); }
+function save(){
+  try { var o = {}; Object.keys(st).forEach(function(k){ if (k !== 'form' && k !== 'look') o[k] = st[k]; });
+    sessionStorage.setItem(STORE_KEY, JSON.stringify({v:CONFIG.VERSION, st:o})); } catch(e){}
+}
+function restore(){
+  try {
+    var raw = sessionStorage.getItem(STORE_KEY); if (!raw) return false;
+    var o = JSON.parse(raw);
+    if (!o || o.v !== CONFIG.VERSION || !o.st || !o.st.pg || o.st.pg.length !== PAGES.length) return false;
+    st = o.st; if (!st.cls) st.cls = newCls(); st.cls.submitting = false;
+    if (st.view !== 'pages') st.view = 'pages';
+    return true;
+  } catch(e){ return false; }
+}
+function normalizeId(raw){ return String(raw || '').replace(/\D/g, ''); }
+function normalizeCode(c){ return String(c || '').toUpperCase().replace(/[^A-Z0-9]/g, ''); }
+function secLabel(s){ return CONFIG.SECTIONS[s] ? CONFIG.SECTIONS[s].label : String(s || ''); }
+function shortId(h){ return h ? String(h).slice(0, 6).toUpperCase() : ''; }
+function onClick(sel, fn){ var el = $(sel); if (el) el.addEventListener('click', fn); }
+function showNav(on){ var n = $('.nav'); if (n) n.style.display = on ? '' : 'none'; }
+function modeTag(){ var t = $('#modetag'); if (!t) return; if (!st.cls.mode){ t.style.display = 'none'; return; } t.style.display = ''; t.textContent = isClass() ? 'Class version' : 'Practice'; }
+async function sha256Hex(text){
+  var buf = new TextEncoder().encode(text);
+  var hash = await crypto.subtle.digest('SHA-256', buf);
+  return Array.from(new Uint8Array(hash)).map(function(b){ return b.toString(16).padStart(2, '0'); }).join('');
+}
+async function postOnce(payload, timeoutMs){
+  var ctrl = new AbortController();
+  var t = setTimeout(function(){ ctrl.abort(); }, timeoutMs || 60000);
+  try {
+    var res = await fetch(CONFIG.ENDPOINT, {method:'POST', body:JSON.stringify(payload), signal:ctrl.signal, credentials:'omit', cache:'no-store'});
+    var text = await res.text();
+    try { return JSON.parse(text); } catch(e){ return {ok:false, error:'bad_response'}; }
+  } catch(e){ return {ok:false, error:(e && e.name === 'AbortError') ? 'timeout' : 'network'}; }
+  finally { clearTimeout(t); }
+}
+/* Google sometimes answers slowly or with an error page; try up to three times */
+async function post(payload, timeoutMs){
+  var r = null;
+  for (var a = 0; a < 3; a++){
+    r = await postOnce(payload, timeoutMs || 60000);
+    if (r && (r.ok || (r.error !== 'timeout' && r.error !== 'network' && r.error !== 'bad_response'))) return r;
+    await new Promise(function(res){ setTimeout(res, 1200 + a * 800); });
+  }
+  return r;
+}
+function whoStrip(p){
+  if (!isClass() || p.type === 'start') return '';
+  var c = st.cls;
+  return '<div class="who"><span>🎓 Class version · ' + esc(secLabel(c.section)) + ' · ID ending in <b>' + esc(c.tail) + '</b></span>' + (c.recordId ? '<span>Record ' + esc(shortId(c.recordId)) + '</span>' : '') + '</div>';
+}
+function modeBox(){
+  var c = st.cls;
+  if (c.mode === 'class') return '<div class="modebox signed"><b>✅ You are signed in.</b> ' + esc(secLabel(c.section)) + ' · ID ending in <b>' + esc(c.tail) + '</b>. Press <b>Start ➤</b> at the bottom.</div>';
+  if (c.mode === 'practice') return '<div class="modebox"><b>You are in practice mode.</b> Nothing is saved. Press <b>Start ➤</b> at the bottom.' +
+    '<p class="small" style="margin:10px 0 0">Need points? <button class="linkbtn" type="button" id="toClass">Switch to the class version</button> (this starts over from page 1).</p></div>';
+  return '<div class="modebox">' +
+    '<div class="modehead">Choose one</div>' +
+    '<button class="btn blue wide" type="button" id="goClass">🎓 Class version (for points) ➤</button>' +
+    '<p class="small modenote">Use this in class. You need the <b>class code</b> your professor gives you. Your points and the lines you type are saved for your professor.</p>' +
+    '<button class="btn soft wide" type="button" id="goPractice">Practice only</button>' +
+    '<p class="small modenote">Nothing is saved. No points count.</p>' +
+    '<p class="small" style="margin:4px 0 0"><button class="linkbtn" type="button" id="goLookup">Already finished? Check that your result was saved.</button></p>' +
+  '</div>';
+}
+function secButtons(locked){
+  return '<div class="secrow">' + Object.keys(CONFIG.SECTIONS).map(function(k){ var s = CONFIG.SECTIONS[k], on = st.cls.section === k;
+    return '<button type="button" class="secbtn' + (on ? ' on' : '') + '" data-sec="' + k + '" aria-pressed="' + on + '"' + (locked ? ' disabled' : '') + '><b>' + esc(s.label) + '</b><span>' + esc(s.sub) + '</span></button>'; }).join('') + '</div>';
+}
+function renderSignin(){
+  showNav(false); modeTag();
+  var f = st.form || (st.form = {id:'', code:'', confirm:false, err:''});
+  var h = '<h1>Class version: sign in</h1>' +
+    '<p class="lrow">Three short steps. Then the exercises start.</p>' +
+    '<div class="signstep"><div class="stephead"><span class="sn">1</span> Tap your class.</div>' + secButtons(f.confirm) + '</div>' +
+    '<div class="signstep"><label class="stephead" for="sid"><span class="sn">2</span> Type the 8 digit number you log in to Blackboard with.</label>' +
+      '<p class="small" style="margin:0 0 8px">This is your Student ID. It starts with 0, for example 03083452.</p>' +
+      '<input id="sid" class="field" inputmode="numeric" autocomplete="off" maxlength="14" value="' + esc(f.id) + '"' + (f.confirm ? ' readonly' : '') + '></div>' +
+    '<div class="signstep"><label class="stephead" for="scode"><span class="sn">3</span> Type the class code.</label>' +
+      '<p class="small" style="margin:0 0 8px">Your professor says it in class. It is a word and a number.</p>' +
+      '<input id="scode" class="field" autocomplete="off" autocapitalize="characters" spellcheck="false" value="' + esc(f.code) + '"' + (f.confirm ? ' readonly' : '') + '></div>' +
+    '<div id="serr" class="err" aria-live="polite">' + esc(f.err || '') + '</div>';
+  if (!f.confirm){
+    h += '<div class="btnrow"><button type="button" class="btn blue" id="signNext">Next ➤</button></div>';
+  } else {
+    var d = normalizeId(f.id);
+    h += '<div class="confirm"><p style="margin:0 0 4px">You typed:</p><div class="bigid">' + esc(d.slice(0, 4) + ' ' + d.slice(4)) + '</div>' +
+      '<p style="margin:8px 0 12px">Is this <b>your</b> Blackboard number? If it is wrong, your points go to no one.</p>' +
+      '<div class="btnrow"><button type="button" class="btn blue" id="signYes">Yes, that is me ➤</button><button type="button" class="btn soft" id="signFix">No, let me fix it</button></div></div>';
+  }
+  h += '<div class="how" style="margin-top:18px"><b>🔒 What is saved</b><br>A scrambled version of your number, your points, the lines you type, and the time. Your name is never saved. Your number is never saved the way you typed it.</div>' +
+    '<p><button type="button" class="btn ghost" id="signBack">‹ Back to the start</button></p>';
+  $('#page').innerHTML = h;
+  var sid = $('#sid'), sc = $('#scode');
+  if (sid) sid.addEventListener('input', function(){ f.id = sid.value; });
+  if (sc) sc.addEventListener('input', function(){ f.code = sc.value; });
+  if (!f.confirm) $$('[data-sec]').forEach(function(b){ b.addEventListener('click', function(){ keepInputs(); st.cls.section = b.dataset.sec; f.err = ''; renderSignin(); }); });
+  onClick('#signNext', function(){
+    keepInputs(); var d = normalizeId(f.id);
+    if (!st.cls.section){ f.err = 'Step 1 is missing: tap your class.'; renderSignin(); return; }
+    if (d.length !== 8){ f.err = 'Step 2: your number needs 8 digits. You typed ' + d.length + '.'; renderSignin(); return; }
+    if (normalizeCode(f.code).length < 3){ f.err = 'Step 3 is missing: type the class code.'; renderSignin(); return; }
+    f.err = ''; f.confirm = true; renderSignin();
+  });
+  onClick('#signFix', function(){ f.confirm = false; f.err = ''; renderSignin(); var i = $('#sid'); if (i) i.focus(); });
+  onClick('#signYes', signIn);
+  onClick('#signBack', function(){ st.form = null; st.view = 'pages'; go(0); });
+}
+function keepInputs(){ var sid = $('#sid'), sc = $('#scode'); if (!st.form) return; if (sid) st.form.id = sid.value; if (sc) st.form.code = sc.value; }
+async function signIn(){
+  var f = st.form, btn = $('#signYes');
+  var d = normalizeId(f.id), code = normalizeCode(f.code);
+  btn.disabled = true; btn.textContent = 'Checking the class code…';
+  var wait = document.createElement('p'); wait.className = 'small'; wait.style.margin = '10px 0 0'; wait.textContent = '⏳ This can take up to one minute. Keep this page open.'; btn.parentNode.parentNode.appendChild(wait);
+  var fx = $('#signFix'); if (fx) fx.disabled = true;
+  var h1;
+  try { h1 = await sha256Hex(CONFIG.SALT1 + '|' + d); }
+  catch(e){ f.err = 'This browser could not scramble your number. Open this page in Chrome, Safari, or Edge.'; f.confirm = false; renderSignin(); return; }
+  var r = await postOnce({action:'start', h1:h1, section:st.cls.section, activity:CONFIG.ACTIVITY, code:code, clientVersion:CONFIG.VERSION}, 45000);
+  var unreachable = !r || r.error === 'timeout' || r.error === 'network' || r.error === 'bad_response';
+  if (!unreachable && !r.ok){
+    var why = {bad_code:'That class code is not right. Check it and type it again.',
+      window_closed:'This activity is closed right now. It opens in class. The closing time is in Blackboard. Ask Professor Calafiore.',
+      no_endpoint:'Saving is switched off on this copy of the page.'};
+    f.err = why[r.error] || ('Something went wrong (' + r.error + '). Try again.');
+    f.confirm = false; renderSignin(); return;
+  }
+  var c = st.cls;
+  c.mode = 'class'; c.h1 = h1; c.tail = d.slice(-2); c.code = code; c.unverified = unreachable;
+  c.recordId = (r && r.ok && r.recordId) || null; c.startedAt = new Date().toISOString();
+  st.form = null; st.view = 'pages';
+  go(1);
+}
+function typedPages(){ var out = []; PAGES.forEach(function(p, i){ if (p.type === 'type') out.push(i); }); return out; }
+async function submitFinal(){
+  var c = st.cls;
+  if (!isClass() || c.submitting || (c.submitted && c.submitted.ok)) return;
+  c.submitting = true; c.submitError = null; save(); refreshEndStatus();
+  var pts = [], misses = [];
+  PAGES.forEach(function(p, i){ if (p.pts){ pts.push(st.pg[i].done ? st.pg[i].points : 0); misses.push(st.pg[i].misses || 0); } });
+  var tp = typedPages();
+  var payload = {action:'submit', h1:c.h1, section:c.section, activity:CONFIG.ACTIVITY, code:c.code, clientVersion:CONFIG.VERSION,
+    startedAt:c.startedAt, score:total(), maxScore:MAXPTS,
+    practicePicks:pts, practiceExplored:misses,
+    checkAnswers:tp.map(function(i){ return String(st.pg[i].typed || '').replace(/\s+/g, ' ').trim().slice(0, 300); }),
+    checkStatuses:tp.map(function(i){ var r = st.pg[i].result; return r ? r.score + '/3' : 'none'; })};
+  var r = await post(payload, 60000);
+  c.submitting = false;
+  if (r && r.ok){ c.submitted = r; c.recordId = r.recordId || c.recordId; c.submitError = null; }
+  else c.submitError = (r && r.error) || 'network';
+  save(); refreshEndStatus();
+}
+function recHTML(){
+  var c = st.cls, lab = esc(secLabel(c.section));
+  if (c.submitted && c.submitted.ok){
+    var when = c.submitted.submittedAt ? new Date(c.submitted.submittedAt) : new Date();
+    if (isNaN(when)) when = new Date();
+    var t = when.toLocaleTimeString([], {hour:'numeric', minute:'2-digit'});
+    var again = (c.submitted.already && c.submitted.score != null && +c.submitted.score !== total()) ? ' A result for this number was already saved earlier, so the first one stands (' + esc(c.submitted.score) + ' of ' + esc(c.submitted.maxScore) + ' points).' : '';
+    return '<div class="fb good"><b>✅ Saved</b> at ' + esc(t) + ' for ' + lab + '. Record ID <b>' + esc(shortId(c.recordId)) + '</b>.' + again + '</div>' +
+      '<p class="small">📸 Take a screenshot of this page. It is your proof. Your grade appears in Blackboard after the activity closes.</p>';
+  }
+  if (c.submitting || !c.submitError) return '<div class="fb note"><b>⏳ Saving your result…</b> This can take up to one minute. Keep this page open.</div>';
+  var msgs = {window_closed:'The activity is closed now, so this result was not saved.', bad_code:'The class code did not match, so this result was not saved yet. Your answers are still here.',
+    timeout:'The connection timed out.', network:'The connection failed.', bad_response:'The answer from the server was not readable.'};
+  var m = msgs[c.submitError] || ('Error: ' + c.submitError + '.');
+  var retry = c.submitError === 'window_closed' ? '' : (c.submitError === 'bad_code' ?
+    '<div class="signstep" style="margin-top:12px"><label class="stephead" for="fixcode"><span class="sn">!</span> Type the class code again.</label><input id="fixcode" class="field" autocomplete="off" autocapitalize="characters" spellcheck="false"><div class="btnrow" style="margin-top:12px"><button class="btn blue" type="button" id="retryCode">Save with this code</button></div></div>' :
+    '<p><button class="btn blue" type="button" id="retrySubmit">Try to save again</button></p><p class="small">Check the Wi-Fi first.</p>');
+  return '<div class="fb miss"><b>⚠️ Not saved yet.</b> ' + esc(m) + '</div>' + retry +
+    '<p class="small">📸 Take a screenshot of this whole page now and show it to Professor Calafiore. Backup code: <b>B-' + esc(shortId(c.h1)) + '</b>.</p>';
+}
+function refreshEndStatus(){ var b = $('#recbox'); if (!b) return; b.innerHTML = recHTML(); onClick('#retrySubmit', submitFinal); onClick('#retryCode', function(){ var v = normalizeCode(($('#fixcode') || {}).value); if (v.length < 3) return; st.cls.code = v; st.cls.submitError = null; submitFinal(); }); }
+function endStatus(){
+  if (!isClass()) return '<div class="how"><b>This was practice.</b> Nothing was saved, and no points count. For points, do the <b>class version</b> with the class code.</div>' +
+    '<button class="btn soft" id="restart" type="button">↺ Start over</button>';
+  return '<div id="recbox">' + recHTML() + '</div>';
+}
+function renderLookup(){
+  showNav(false); modeTag();
+  var f = st.look || (st.look = {id:'', out:''});
+  var h = '<h1>Check your result</h1>' +
+    '<p class="lrow">See if your class version was saved. Your score is not shown here. It appears in Blackboard.</p>' +
+    '<div class="signstep"><div class="stephead"><span class="sn">1</span> Tap your class.</div>' + secButtons(false) + '</div>' +
+    '<div class="signstep"><label class="stephead" for="lid"><span class="sn">2</span> Type the 8 digit number you log in to Blackboard with.</label>' +
+      '<input id="lid" class="field" inputmode="numeric" autocomplete="off" maxlength="14" value="' + esc(f.id) + '"></div>' +
+    '<div class="btnrow"><button type="button" class="btn blue" id="lookGo">Check ➤</button></div>' +
+    '<div id="lookOut" aria-live="polite" style="margin-top:14px">' + f.out + '</div>' +
+    '<p><button type="button" class="btn ghost" id="lookBack">‹ Back to the start</button></p>';
+  $('#page').innerHTML = h;
+  var lid = $('#lid'); lid.addEventListener('input', function(){ f.id = lid.value; });
+  $$('[data-sec]').forEach(function(b){ b.addEventListener('click', function(){ f.id = lid.value; st.cls.section = b.dataset.sec; renderLookup(); }); });
+  onClick('#lookBack', function(){ st.look = null; st.view = 'pages'; go(0); });
+  onClick('#lookGo', async function(){
+    f.id = lid.value; var d = normalizeId(f.id), btn = $('#lookGo');
+    if (!st.cls.section){ f.out = '<div class="fb miss">Step 1 is missing: tap your class.</div>'; renderLookup(); return; }
+    if (d.length !== 8){ f.out = '<div class="fb miss">Your number needs 8 digits. You typed ' + d.length + '.</div>'; renderLookup(); return; }
+    btn.disabled = true; btn.textContent = 'Checking…';
+    var h1; try { h1 = await sha256Hex(CONFIG.SALT1 + '|' + d); } catch(e){ h1 = null; }
+    var r = h1 ? await post({action:'lookup', h1:h1, section:st.cls.section, clientVersion:CONFIG.VERSION}, 60000) : null;
+    if (!r || !r.ok){ f.out = '<div class="fb miss">Could not reach the server. Check the Wi-Fi and try again.</div>'; renderLookup(); return; }
+    if (!Array.isArray(r.found)){ f.out = '<div class="fb note"><b>The check is not available right now.</b> Your screenshot of the Saved page is your proof. Try again later.</div>'; renderLookup(); return; }
+    var mine = r.found.filter(function(x){ return x.activity === CONFIG.ACTIVITY; });
+    var fmt = function(iso){ var dd = new Date(iso); return isNaN(dd) ? String(iso) : dd.toLocaleString([], {month:'short', day:'numeric', hour:'numeric', minute:'2-digit'}); };
+    if (!mine.length) f.out = '<div class="fb note"><b>No record</b> for this number in ' + esc(secLabel(st.cls.section)) + ' for Will They Open It. If you did the class version, email Professor Calafiore with the date and the time you did it.</div>';
+    else {
+      var x = mine[0];
+      f.out = x.submittedAt ? '<div class="fb good"><b>✅ Saved</b> on ' + esc(fmt(x.submittedAt)) + '. Record ID <b>' + esc(shortId(x.recordId)) + '</b>.</div>'
+        : '<div class="fb note"><b>Started</b> on ' + esc(fmt(x.startedAt)) + ' but <b>not finished</b>. Nothing was saved at the end.</div>';
+    }
+    renderLookup();
+  });
+}
+
+/* ================= CONTENT ================= */
+
+var SEQS = {};
+
+var EMAIL = {
+  hi:'Hi team, inventory day is this Saturday.',
+  blocks:[
+    {col:'#D4E8FA', edge:'#7FAEDD', raw:'Please arrive by 6:30 AM and use the back entrance because the front doors stay locked until 9:00.', head:'Arrival', mark:'bullet', lines:['Be here by <b>6:30 AM</b>', 'Use the <b>back entrance</b>']},
+    {col:'#FFF2B8', edge:'#D9B92A', raw:'Bring closed shoes and a water bottle and you should have your phone charger.', head:'What to bring', mark:'box', lines:['Closed shoes', 'A water bottle', 'You should have your phone charger']},
+    {col:'#E6DDF8', edge:'#A08BD6', raw:'To count a shelf you scan the shelf tag and then you count every item and then you type the number into the app.', head:'How to count a shelf', mark:'num', lines:['Scan the shelf tag', 'Count every item', 'Type the number into the app']},
+    {col:'#FFE1CF', edge:'#E3A47A', raw:'Breakfast is at 8:00 in the break room and it is on us.', head:'Breakfast', mark:'bullet', lines:['<b>8:00</b> in the break room', 'It is <b>on us</b>']}
+  ],
+  bye:'Priya'
+};
+
+function firstWord(t){ var m = String(t).trim().match(/^[^A-Za-z]*([A-Za-z']+)/); return m ? m[1].toLowerCase() : ''; }
+function startsAction(t){
+  var w = firstWord(t);
+  if (!w) return false;
+  if (/ing$/.test(w)) return false;
+  if (['the','a','an','carts','cart','you','your','we','they','it','there','all','each','every','please','always','to','be','our','these','those','this','that','and','also','then'].indexOf(w) >= 0) return false;
+  if (/\b(should|must|need to|needs to|have to|has to|are to|is to|will)\s+be\b/i.test(t)) return false;
+  return true;
+}
+function isLabel(t){ return !/[.!?]\s*$/.test(t) && !/\b(is|are|was|were|will|should|must|please)\b/i.test(t); }
+
+/* ===== KINDS ===== */
+var KINDS = [
+  {name:'Subject line', icon:'✉️', bg:'#D4E8FA', edge:'#5E8DBB',
+   rule:'The topic, plus the one detail that matters.',
+   plain:'The subject line is the only thing a reader sees before opening. Say what the email is about. Then add the one detail the reader needs: what changed, the date, the deadline. Five traps to avoid: shouting (ALL CAPS and !!!), fake small (Quick task!), too long for a phone (a phone shows about 40 characters), too many asks in one line, and no action word.',
+   before:[['Subject: ', {x:'Quick question'}]],
+   after:[['Subject: ', {n:'Parking lot closed Friday: park at the bank'}]],
+   why:'Quick question could be anything. The new line says the topic (parking lot closed) and the one detail that matters (Friday, park at the bank). The reader knows what to do before opening.',
+   term:'a specific subject line',
+   spot:'Cover the email and read only the subject line. Can the reader tell what it is about, and what matters?',
+   next:['Pick the subject line that says the topic and the detail.', 'Pick the one that fits on a phone.', 'Find the three subject lines that fall into a trap.', 'Type one subject line yourself.', 'Type one more.']},
+  {name:'Greeting', icon:'👋', bg:'#E6DDF8', edge:'#9B7FD4',
+   rule:'Dear for someone you do not know well or someone senior. Hello or Hi for people you work with.',
+   plain:'Dear + title + last name when you have never met them or they are senior to you: Dear Dr. Brown. Hello or Hi + first name for a colleague, your team, or a client you talk to often: Hello John. Hi Sarah. Pronouns unknown? Skip Mr. and Ms. Use the name or the role: Dear Jordan. Dear Team Lead.',
+   before:[[{x:'Hey Dr. B,'}]],
+   after:[[{n:'Dear Dr. Brown,'}]],
+   why:'You have never met Dr. Brown. Hey is for friends. Dear, the title, and the last name show respect from the first word.',
+   term:'matching the greeting to the reader',
+   spot:'Ask two questions. How well do I know this person? Are they senior to me?',
+   next:['Pick the greeting for a doctor you have never met.', 'Pick the greeting when you do not know the pronouns.', 'Pick the greeting for your own team.', 'Pick the greeting for a client you email every week.', 'Type one greeting yourself.']}
+];
+function fitsPhone(t){ var L = String(t).replace(/[^A-Za-z]/g, ''); return words(t) <= 10 && !/!{2,}/.test(t) && !(L.length >= 6 && L === L.toUpperCase()); }
+
+/* ===== PAGES ===== */
+var PAGES = [
+  {type:'start'},
+
+  /* ---------- Part 1: Subject line ---------- */
+  {type:'learn', kind:0},
+  {type:'choose', kind:0, ex:1, of:5, pts:2, where:'🅿️ Email to the whole office', reader:'Everyone reads it on a phone before they drive in on Friday.', face:'🧑', who:'A coworker thinks', cloud:'Bank lot on Friday. Got it.',
+   ctxLabel:'What Dana, the office manager, needs to say', ctxLines:['The parking lot is closed Friday, October 17, for repaving. Everyone should park at the bank next door.'],
+   options:[
+     {t:'Parking lot closed Friday: park at the bank', ok:true, msg:'The topic (parking lot closed) plus the one detail that matters (Friday, park at the bank).'},
+     {t:'Parking', msg:'One word. Closed? Open? When? The reader has to open the email to find out, and many will not.'},
+     {t:'IMPORTANT!!! READ THIS!!!', msg:'Shouting. All caps and !!! read as yelling, and email filters flag it as spam.'},
+     {t:'Quick note about Friday', msg:'Quick note hides the point. Friday what? Say the topic.'}],
+   steps:['Read what Dana needs to say.', 'Tap the subject line that says the topic and the one detail that matters.'], note:'Ask: can the reader tell what it is about before opening?'},
+  {type:'choose', kind:0, ex:2, of:5, pts:2, where:'📱 Email to 40 people, read on phones', reader:'Most of them read it on a phone. A phone shows about 40 characters.', face:'🧑', who:'A coworker thinks', cloud:'Tuesday, 2 PM, Room B. Fits on my screen.',
+   ctxLabel:'What HR needs to say', ctxLines:['Compliance training is Tuesday, October 21, at 2 PM in Room B. Everyone must attend.'],
+   options:[
+     {t:'Compliance training: Tue Oct 21, 2 PM, Room B', ok:true, msg:'About 45 characters. Topic, date, time, room. It fits on a phone.'},
+     {t:'Reminder Regarding the Upcoming Mandatory Compliance Training Session Scheduled for Next Week in the Main Conference Room', msg:'Over 100 characters. On a phone it becomes "Reminder Regarding the Upcoming Manda..." and the date is lost.'},
+     {t:'Training', msg:'Too short this time. Which training? When? Say the topic and the one detail.'},
+     {t:'Hey all, training next week', msg:'Hey all sounds like a text, and next week is not a date. Give the day and the time.'}],
+   steps:['Picture the subject line on a phone.', 'Tap the one that fits and still says what matters.'], note:'A phone shows about 40 characters. After that, three dots.'},
+  {type:'spot', kind:0, ex:3, of:5, pts:2, where:'📥 Monday inbox at Brightwater', reader:'Everyone in the office, on their phones.', face:'🧑', who:'A coworker thinks', cloud:'Three of those go straight to the trash.',
+   label:'Six subject lines from one inbox. Three fall into a trap.', listy:true, count:3, whyHead:'Why these three are traps:',
+   chips:[
+     {t:'Submit your claims numbers by Wednesday noon', why:'This one is fine. Action word, topic, deadline.'},
+     {t:'URGENT!!! READ THIS NOW!!!', bad:true, why:'All caps and !!! read as shouting. Nobody knows what it is about.', fix:'Urgent: review the claims numbers by noon'},
+     {t:'Open enrollment closes Friday, Oct 24', why:'This one is fine. Topic plus the date.'},
+     {t:'Quick favor!', bad:true, why:'It promises small. The email is a two hour job. That is the fake small trap.', fix:'Input needed on the Q3 claims report by Friday'},
+     {t:'Reply, confirm your shift, send your W-4, and read the potluck details', bad:true, why:'Four asks in one line. The reader picks none.', fix:'Confirm your Saturday shift by Thursday'},
+     {t:'Lunch and learn: Tuesday 12 PM, Room B', why:'This one is fine. Topic, day, time, room.'}],
+   steps:['Tap every subject line that falls into a trap.', 'Tap Check my picks.'], note:'There are 3 to find. A tapped line turns purple. Tap it again to undo.'},
+  {type:'type', kind:0, ex:4, of:5, pts:3, where:'⏰ Email to the whole office', reader:'Everyone reads it on a phone between meetings.', face:'🧑', who:'A coworker thinks',
+   ctxLabel:'What Dana needs to say', ctxLines:['Timesheets are due Friday at 5 PM. A late timesheet means a late paycheck.'],
+   boxLabel:'Your subject line (10 words or fewer):',
+   steps:['Read what Dana needs to say.', 'Type the subject line in the box.', 'Tap Check my answer.'], note:'Say the topic. Add the one detail that matters. No shouting.',
+   limit:10, min:2,
+   checks:[
+     {label:'Says the topic: timesheets', test:function(t){ return /time\s?sheets?/i.test(t); }},
+     {label:'Gives the one detail that matters: Friday, or the 5 PM deadline', test:function(t){ return /friday|\b5\s?(pm|p\.m\.)|5:00/i.test(t); }},
+     {label:'Fits on a phone: 10 words or fewer, no all caps, no !!!', test:function(t){ return fitsPhone(t); }}],
+   model:'Submit your timesheet by Friday 5 PM', modelWhy:'Topic: timesheet. Detail: Friday 5 PM. It starts with an action word, Submit.',
+   cloudPass:'Timesheet. Friday. Got it.', cloudLong:'Timesheets, but when?', cloudMissing:'Open it, or skip it? I cannot tell.'},
+  {type:'type', kind:0, ex:5, of:5, pts:3, where:'🧊 Email to the whole office', reader:'Everyone, including the person whose yogurt is in the fridge.', face:'🧑', who:'A coworker thinks',
+   ctxLabel:'What Dana needs to say', ctxLines:['The kitchen fridge gets emptied Thursday at 6 PM. Anything left inside goes in the trash.'],
+   boxLabel:'Your subject line (10 words or fewer):',
+   steps:['Read what Dana needs to say.', 'Type the subject line in the box.', 'Tap Check my answer.'], note:'Say the topic. Add the one detail that matters. No shouting.',
+   limit:10, min:2,
+   checks:[
+     {label:'Says the topic: the fridge (or the kitchen)', test:function(t){ return /fridge|refrigerator|kitchen/i.test(t); }},
+     {label:'Gives the one detail that matters: Thursday, or 6 PM', test:function(t){ return /thursday|\b6\s?(pm|p\.m\.)|6:00/i.test(t); }},
+     {label:'Fits on a phone: 10 words or fewer, no all caps, no !!!', test:function(t){ return fitsPhone(t); }}],
+   model:'Fridge cleanout Thursday 6 PM: take your food home', modelWhy:'Topic: fridge cleanout. Detail: Thursday 6 PM. The reader knows what to do before opening.',
+   cloudPass:'Fridge. Thursday. Grabbing my yogurt.', cloudLong:'The fridge, but when?', cloudMissing:'Is this about me?'},
+
+  /* ---------- Part 2: Greeting ---------- */
+  {type:'learn', kind:1},
+  {type:'choose', kind:1, ex:1, of:5, pts:2, where:'🩺 First email to a client\'s doctor', reader:'Dr. Okafor, who has never heard of you.', face:'🧑‍⚕️', who:'Dr. Okafor thinks', cloud:'Dear Dr. Okafor. Respectful. I will sign it.',
+   ctxLabel:'Who you are writing to', ctxLines:['Dr. Amara Okafor, a client\'s physician. You have never met. You need her signature on a claim form.'],
+   options:[
+     {t:'Dear Dr. Okafor,', ok:true, msg:'Never met, and she has a title. Dear + title + last name.'},
+     {t:'Hey Dr. O,', msg:'Hey and a nickname are for a friend. You have never met her.'},
+     {t:'Hi Okafor,', msg:'The last name alone, with no title, sounds rude.'},
+     {t:'To whom it may concern,', msg:'You know her name. This says you did not bother to use it.'}],
+   steps:['Ask: have I met this person? Do they have a title?', 'Tap the greeting.'], note:'Dear for someone you do not know well, or someone senior.'},
+  {type:'choose', kind:1, ex:2, of:5, pts:2, where:'📦 First email to a new vendor contact', reader:'Sam Reyes, who signs emails "Sam Reyes, Account Lead."', face:'🧑', who:'Sam thinks', cloud:'Dear Sam Reyes. No wrong guess. Nice.',
+   ctxLabel:'Who you are writing to', ctxLines:['Sam Reyes. No Mr. or Ms. anywhere. You do not know their pronouns, and guessing wrong is worse than not guessing.'],
+   options:[
+     {t:'Dear Sam Reyes,', ok:true, msg:'The full name. No pronoun needed. Formal and safe.'},
+     {t:'Dear Mr. Reyes,', msg:'A guess. If Sam is not a Mr., you started the relationship with a mistake.'},
+     {t:'Dear Sir or Madam,', msg:'Still a guess, and it sounds like a form letter. You know the name. Use it.'},
+     {t:'Hey there,', msg:'Too casual for a first email to a vendor.'}],
+   steps:['Ask: do I know the pronouns? (No.)', 'Tap the greeting that skips the guess.'], note:'Pronouns unknown? Use the name or the role.'},
+  {type:'choose', kind:1, ex:3, of:5, pts:2, where:'💬 Monday update to your own team', reader:'The four people you sit with every day.', face:'🧑', who:'A teammate thinks', cloud:'Hello Team. Normal. Reading on.',
+   ctxLabel:'What the email says', ctxLines:['A quick Monday update to your own team: the printer is fixed, and the 10 AM meeting moved to 10:30.'],
+   options:[
+     {t:'Hello Team,', ok:true, msg:'People you work with every day: Hello or Hi, plus the name.'},
+     {t:'Dear Esteemed Colleagues,', msg:'So stiff that your team will think you are joking, or angry.'},
+     {t:'Yo team,', msg:'That is a text to friends, not a work email.'},
+     {t:'To whom it may concern,', msg:'To your own team? They will wonder what happened.'}],
+   steps:['Ask: how well do I know them? (Every day.)', 'Tap the greeting.'], note:'Hello or Hi for people you work with.'},
+  {type:'choose', kind:1, ex:4, of:5, pts:2, where:'📅 Weekly email to a client', reader:'Sarah Kim, a client you have emailed every Tuesday for a year.', face:'🧑', who:'Sarah thinks', cloud:'Hi Sarah. Same as always. Reading.',
+   ctxLabel:'Who you are writing to', ctxLines:['Sarah Kim, a client. You have emailed each other every week for a year. This is the usual Tuesday update.'],
+   options:[
+     {t:'Hi Sarah,', ok:true, msg:'A client you know well: Hi plus the first name. Friendly, still professional.'},
+     {t:'Dear Ms. Kim,', msg:'After a year of weekly emails, this sounds cold, like something changed.'},
+     {t:'Sarah.', msg:'A name and a period reads as angry.'},
+     {t:'Hey girl,', msg:'Too casual for a client, even one you like.'}],
+   steps:['Ask: how well do I know her? (Very well.)', 'Tap the greeting.'], note:'Hi for someone you talk to often.'},
+  {type:'type', kind:1, ex:5, of:5, pts:3, where:'🧾 First email to a new client\'s accountant', reader:'Jordan Lee, who has never heard of you.', face:'🧑', who:'Jordan thinks',
+   ctxLabel:'Who you are writing to', ctxLines:['Jordan Lee, the accountant for a new client. You have never met. You do not know their pronouns. The business card shows no title.'],
+   boxLabel:'Your greeting (the first line of the email):',
+   steps:['Read who you are writing to.', 'Type the greeting in the box.', 'Tap Check my answer.'], note:'First email, never met: Dear. Pronouns unknown: the name, no Mr. or Ms.',
+   limit:6, min:1,
+   checks:[
+     {label:'Starts with Dear (a first email to someone you have never met)', test:function(t){ return /^\s*dear\b/i.test(t); }},
+     {label:'Uses the name: Jordan', test:function(t){ return /jordan/i.test(t); }},
+     {label:'No guessed title: no Mr., Ms., Mrs., Sir, or Madam', test:function(t){ return !/\b(mr|ms|mrs|miss|sir|madam)\b\.?/i.test(t); }}],
+   model:'Dear Jordan Lee,', modelWhy:'Dear, because it is a first email. The full name, because you do not know their pronouns. No guessed title.',
+   cloudPass:'Dear Jordan Lee. Respectful. Safe.', cloudLong:'Dear... who?', cloudMissing:'Hey? On a first email?'},
+
+  {type:'end'}
+];
+
+var MAXPTS = PAGES.reduce(function(s, p){ return s + (p.pts || 0); }, 0);
+
+/* ================= STATE ================= */
+var st, busy = false;
+function fresh(){
+  return {i:0, view:'pages', cls:newCls(), pg:PAGES.map(function(){ return {done:false, misses:0, points:0, step:1, fb:null, build:[], typed:'', result:null, chosen:{}, order:null, picks:null}; })};
+}
+st = fresh();
+
+/* ================= HELPERS ================= */
+function pointsFor(p, misses){ if (p.pts === 3) return 3; return misses === 0 ? p.pts : (misses === 1 ? Math.floor(p.pts / 2) : 0); }
+function total(){ return st.pg.reduce(function(s, x){ return s + (x.done ? x.points : 0); }, 0); }
+function setPoints(bump){
+  var el = $('#points'); var t = total();
+  el.textContent = '⭐ ' + t + ' point' + (t === 1 ? '' : 's');
+  if (bump){ el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); }
+}
+function reduced(){ return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; }
+function flyTo(fromEl, toEl, html, cls, shrink){
+  return new Promise(function(res){
+    if (!fromEl || !toEl || reduced()){ res(); return; }
+    var a = fromEl.getBoundingClientRect(), b = toEl.getBoundingClientRect();
+    var g = document.createElement('div'); g.className = 'flyer ' + (cls || ''); g.innerHTML = html;
+    g.style.left = a.left + 'px'; g.style.top = a.top + 'px'; g.style.width = a.width + 'px'; g.style.height = a.height + 'px';
+    document.body.appendChild(g);
+    var dx = (b.left + b.width / 2) - (a.left + a.width / 2), dy = (b.top + b.height / 2) - (a.top + a.height / 2);
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){
+      g.style.transform = 'translate(' + dx + 'px,' + dy + 'px) scale(' + (shrink ? .35 : 1) + ')';
+      if (shrink) g.style.opacity = '0';
+    }); });
+    setTimeout(function(){ g.remove(); res(); }, 540);
+  });
+}
+function scrollSafe(el){
+  if (!el) return;
+  var r = el.getBoundingClientRect(), topH = ($('.top') || {}).offsetHeight || 60, navH = ($('.nav') || {}).offsetHeight || 70;
+  var room = window.innerHeight - navH - 12;
+  var dy = 0;
+  if (r.bottom > room) dy = r.bottom - room;
+  if (r.top - dy < topH + 8) dy = r.top - topH - 8;
+  if (dy) window.scrollBy({top:dy, behavior:reduced() ? 'auto' : 'smooth'});
+}
+function speak(txt){
+  if (!('speechSynthesis' in window)) return;
+  window.speechSynthesis.cancel();
+  var u = new SpeechSynthesisUtterance(txt); u.rate = .95; window.speechSynthesis.speak(u);
+}
+function kindbar(p){
+  var k = KINDS[p.kind];
+  var lab = 'Part ' + (p.kind + 1) + ' of 2 · ' + k.name;
+  var ex = p.ex ? ('<span class="exlabel">Exercise ' + p.ex + ' of ' + (p.of || 5) + '</span>') : '';
+  return '<div class="kindbar"><span class="kpill" style="background:' + k.bg + ';border-color:' + k.edge + '">' + k.icon + ' ' + esc(lab) + '</span>' + ex + '</div>' +
+    (p.type !== 'learn' ? '<div class="rule">📏 <b>Rule:</b> ' + esc(k.rule) + '</div>' : '');
+}
+function whereHTML(p){ return '<div class="where"><span class="wtag">' + esc(p.where) + '</span><span class="wreader">Who reads it: ' + esc(p.reader) + '</span></div>'; }
+function jobHTML(p, step, done){
+  var lis = p.steps.map(function(s, i){
+    var n = i + 1, cls = done || n < step ? 'did' : (n === step ? 'now' : '');
+    return '<li class="' + cls + '"><span class="n">' + (cls === 'did' ? '✓' : n) + '</span><span>' + esc(s) + '</span></li>';
+  }).join('');
+  return '<div class="job"><div class="jobhead"><span class="jobtitle">Your job</span><button class="listen" type="button" id="listenBtn">🔊 Listen</button></div><ol class="steps">' + lis + '</ol>' +
+    (p.note ? '<div class="jobnote">' + esc(p.note) + '</div>' : '') + '</div>';
+}
+function fbHTML(fb){
+  if (!fb) return '<div id="fb" aria-live="polite"></div>';
+  return '<div id="fb" aria-live="polite"><div class="fb ' + fb.kind + '">' + fb.html + '</div></div>';
+}
+function thoughtHTML(p, text){
+  if (!text) return '';
+  return '<div class="thought"><span class="face" aria-hidden="true">' + p.face + '</span><div class="tcloud"><span class="who">' + esc(p.who) + ':</span>' + esc(text) + '<i class="b1"></i><i class="b2"></i></div></div>';
+}
+function countsHTML(before, now, extra){
+  var same = now === before;
+  return '<div class="counts"><span class="cnt">Before: ' + before + ' words</span><span class="cnt ' + (same ? 'same' : 'now') + '" id="nowCnt">Now: ' + now + ' words</span>' + (extra || '') + '</div>';
+}
+function goodNext(msg){ return '<b>✓ Done.</b> ' + esc(msg) + '<span class="next">Press Next ➤</span>'; }
+function shuffle(a){ for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+function capIndex(id){ for (var i = 0; i < PAGES.length; i++){ if (PAGES[i].cap === id) return i; } return -1; }
+function capDone(id){ var i = capIndex(id); return i >= 0 && st.pg[i].done; }
+function typedOf(id){
+  var i = capIndex(id); if (i < 0) return '';
+  var s = st.pg[i]; if (!s.result || s.result.score !== 3) return '';
+  var t = String(s.typed || '').replace(/\s+/g, ' ').trim().replace(/[.:;,!]+$/, '');
+  return t ? t.charAt(0).toUpperCase() + t.slice(1) : '';
+}
+function emailWall(){
+  return '<div class="sentcard"><div class="sentlabel">Priya\'s email, the way she wrote it</div><div class="ctx wall" id="sent">' +
+    esc(EMAIL.hi + ' ' + EMAIL.blocks.map(function(b){ return b.raw; }).join(' ') + ' ' + EMAIL.bye) + '</div></div>';
+}
+function emailHTML(p, fin){
+  if (!fin && !capDone('count')) return emailWall();
+  var spot = fin ? -1 : (p && p.spot != null ? p.spot : -1);
+  var out = '<div class="sentcard"><div class="sentlabel">Priya\'s email' + (fin ? ', laid out' : ', one color per topic') + '</div><div class="email" id="sent"><div class="eline">' + esc(EMAIL.hi) + '</div>';
+  EMAIL.blocks.forEach(function(b, i){
+    var fmt = fin || (i === 0 && capDone('head')) || (i === 1 && capDone('bring')) || (i === 2 && capDone('steps'));
+    var dim = spot >= 0 && spot !== i;
+    var inner;
+    if (!fmt) inner = esc(b.raw);
+    else {
+      var head = b.head, lines = b.lines.slice();
+      if (i === 0){ var th = typedOf('head'); if (th) head = th; }
+      if (i === 1){
+        if (fin || capDone('line')) lines[2] = esc(typedOf('line') || 'A phone charger');
+        else lines[2] = '<span class="oddline">' + lines[2] + '</span>';
+      }
+      inner = '<div class="ehead">' + esc(head) + '</div>' + lines.map(function(l, j){
+        var mk = b.mark === 'num' ? (j + 1) + '.' : (b.mark === 'box' ? '☐' : '•');
+        return '<div class="eli"><span class="mk">' + mk + '</span><span>' + l + '</span></div>'; }).join('');
+    }
+    out += '<div class="eblock' + (dim ? ' dim' : '') + '" style="background:' + b.col + ';border-color:' + b.edge + '">' + inner + '</div>';
+  });
+  out += '<div class="eline">' + esc(EMAIL.bye) + '</div></div></div>';
+  return out;
+}
+function linesHTML(p, s){
+  return p.ctxLines.map(function(l, i){
+    if (l === '?'){
+      if (s && s.done && p.fill) return '<div class="cl new">' + esc(p.fill) + '</div>';
+      return '<div class="cl slot">The missing line goes here</div>';
+    }
+    return '<div class="cl' + (p.hi === i ? ' odd' : '') + '">' + esc(l) + '</div>';
+  }).join('');
+}
+function ctxHTML(p, s){
+  if (p.email) return emailHTML(p, false);
+  if (!p.ctxLines) return '';
+  return '<div class="sentcard"><div class="sentlabel">' + esc(p.ctxLabel || '') + '</div><div class="ctx" id="sent">' + linesHTML(p, s) + '</div>' +
+    (p.ctxNote ? '<p class="ctxnote">' + esc(p.ctxNote) + '</p>' : '') + '</div>';
+}
+
+/* ================= RENDER ================= */
+function render(){
+  if (st.view === 'signin'){ renderSignin(); save(); return; }
+  if (st.view === 'lookup'){ renderLookup(); return; }
+  showNav(true);
+  var p = PAGES[st.i], s = st.pg[st.i];
+  var h = '';
+  if (p.type === 'start') h = renderStart();
+  else if (p.type === 'learn') h = renderLearn(p);
+  else if (p.type === 'build') h = renderBuild(p, s);
+  else if (p.type === 'type') h = renderType(p, s);
+  else if (p.type === 'choose') h = renderChoose(p, s);
+  else if (p.type === 'spot') h = renderSpot(p, s);
+  else if (p.type === 'end') h = renderEnd();
+  var pg = $('#page');
+  pg.innerHTML = whoStrip(p) + h;
+  pg.style.animation = 'none'; void pg.offsetWidth; pg.style.animation = '';
+  bind(p, s);
+  nav();
+  modeTag();
+  save();
+}
+function renderStart(){
+  return '<h1>Will They Open It?</h1>' +
+    '<p class="lrow">You are the new <b>office coordinator</b> at <b>Brightwater Insurance</b>, a small insurance agency. Dana, the office manager, left a sticky note on your desk:</p>' +
+    '<div class="sticky">"Half the office never opens my emails. And a client said my greeting felt rude. Can you fix how our emails start?"<span class="sig">Dana</span></div>' +
+    '<p class="lrow"><b>Plain words:</b> two decisions happen before anyone reads your email. The <b>subject line</b> decides if they open it. The <b>greeting</b> sets the tone.</p>' +
+    '<div class="how"><b>How this works</b><ol>' +
+    '<li>Every page has <b>one job</b>. The job is in the <b>blue box</b>.</li>' +
+    '<li><b>Tap</b> the answer. On two pages you <b>type</b> a short line.</li>' +
+    '<li>Read the short message that appears. Then press <b>Next</b>.</li></ol></div>' +
+    '<div class="how"><b>How points work</b><ol>' +
+    '<li>Right on the <b>first try</b>: full points.</li>' +
+    '<li>Right on the <b>second try</b>: half points.</li>' +
+    '<li>Keep going either way. Every page shows you the answer in the end.</li></ol></div>' +
+    '<p class="lrow">There are <b>2 parts</b>: the subject line, then the greeting. Each part gets a short explanation page, then <b>5 exercises</b>.</p>' +
+    '<p class="lrow">⏱️ It takes about <b>15 minutes</b>.</p>' + modeBox();
+}
+function exLine(parts){
+  return '<div class="exl">' + parts.map(function(x){
+    if (typeof x === 'string') return esc(x);
+    if (x.x) return '<span class="xpart">' + esc(x.x) + '</span>';
+    if (x.h) return '<b class="hd">' + esc(x.h) + '</b>';
+    return '<span class="npart">' + esc(x.n) + '</span>';
+  }).join('') + '</div>';
+}
+function renderLearn(p){
+  var k = KINDS[p.kind];
+  if (p.kind === 3){
+    return '<div class="band" style="background:' + k.bg + '"><div class="kicker">Last step</div><h1>' + k.icon + ' ' + esc(k.name) + '</h1></div>' +
+      '<p class="lrow">One last job. Priya wrote an email about <b>inventory day</b>. It is <b>one block of text</b>.</p>' +
+      emailWall() +
+      '<p class="lrow">You will lay it out <b>one step per page</b>. The email stays on the screen the whole time, so you can <b>watch it change</b>.</p>' +
+      '<div class="how"><b>Remember the 3 tools</b><ol>' +
+      '<li><b>Same start:</b> ' + esc(KINDS[0].rule) + '</li><li><b>Bullets and numbers:</b> ' + esc(KINDS[1].rule) + '</li>' +
+      '<li><b>Bold headers:</b> ' + esc(KINDS[2].rule) + '</li></ol></div>' +
+      '<p><button class="listen" type="button" id="listenBtn">🔊 Listen</button></p>';
+  }
+  return '<div class="band" style="background:' + k.bg + '"><div class="kicker">Part ' + (p.kind + 1) + ' of 2</div><h1>' + k.icon + ' ' + esc(k.name) + '</h1></div>' +
+    '<p class="lrow">Look at this example first.</p>' +
+    '<div class="example">' +
+      '<div class="exrow"><div class="exlab">Before</div><div class="exs">' + k.before.map(exLine).join('') + '</div></div>' +
+      '<div class="exrow after"><div class="exlab">After</div><div class="exs">' + k.after.map(exLine).join('') + '</div></div>' +
+    '</div>' +
+    '<p class="lrow"><b class="lab">Why it is better:</b> ' + esc(k.why) + '</p>' +
+    '<p class="lrow"><b class="lab">Plain words:</b> ' + esc(k.plain) + '</p>' +
+    '<div class="rule">📏 <b>Rule:</b> ' + esc(k.rule) + '</div>' +
+    (k.term ? '<p class="lrow"><b class="lab">The name for this:</b> ' + esc(k.term) + '.</p>' : '') +
+    '<p class="lrow"><b class="lab">How to check:</b> ' + esc(k.spot) + '</p>' +
+    '<div class="job"><div class="jobhead"><span class="jobtitle">What you will do on the next ' + k.next.length + ' pages</span><button class="listen" type="button" id="listenBtn">🔊 Listen</button></div><ol class="steps">' + k.next.map(function(x, i){ return '<li><span class="n">' + (i + 1) + '</span><span>' + esc(x) + '</span></li>'; }).join('') + '</ol></div>';
+}
+function renderBuild(p, s){
+  if (!s.done) s.step = s.build.length >= p.answer.length ? 2 : 1;
+  var tileOf = function(id){ return p.bank.filter(function(b){ return b.id === id; })[0]; };
+  var bankIds = p.bank.map(function(b){ return b.id; }).filter(function(id){ return s.build.indexOf(id) < 0; });
+  var mk = function(i){ return p.marker === 'num' ? (i + 1) + '.' : '•'; };
+  var ans;
+  if (s.done){
+    var ids = p.anyOrder ? s.build : p.answer;
+    ans = ids.map(function(id, i){ return '<div class="fl"><span class="mk">' + mk(i) + '</span><span>' + esc(tileOf(id).t) + '</span></div>'; }).join('');
+  } else {
+    ans = s.build.length ? s.build.map(function(id, i){ return '<div class="bl"><span class="mk">' + mk(i) + '</span><button type="button" class="tile" data-back="' + id + '">' + esc(tileOf(id).t) + '</button></div>'; }).join('') :
+      '<span class="ph">Your list goes here. Tap a tile below.</span>';
+  }
+  var h = kindbar(p) + whereHTML(p) + jobHTML(p, s.step, s.done) + ctxHTML(p, s) +
+    '<div class="tilehead leadline">' + esc(p.lead) + '</div><div class="answer aslist' + (s.done ? ' final' : '') + '" id="answer">' + ans + '</div>';
+  if (!s.done){
+    h += '<div class="tilehead">Tiles:</div><div class="bank" id="bankTiles">' + bankIds.map(function(id){ return '<button type="button" class="tile" data-add="' + id + '">' + esc(tileOf(id).t) + '</button>'; }).join('') + '</div>' +
+      '<div class="btnrow"><button type="button" class="btn blue" id="checkBuild"' + (s.build.length ? '' : ' disabled') + '>Check my list</button><button type="button" class="btn soft" id="clearBuild"' + (s.build.length ? '' : ' disabled') + '>Start over</button></div>';
+  }
+  h += fbHTML(s.fb) + (s.done ? thoughtHTML(p, p.cloud) : '');
+  return h;
+}
+function cntTxt(n, p){ return 'Yours: ' + n + ' word' + (n === 1 ? '' : 's') + '. Limit: ' + p.limit + '.'; }
+function cntCls(n, p){ return !n ? '' : (n <= p.limit ? 'now' : 'over'); }
+function renderType(p, s){
+  var n = words(s.typed);
+  var h = kindbar(p) + whereHTML(p) + jobHTML(p, s.step, s.done) + ctxHTML(p, s) +
+    '<label for="typed" class="tilehead" style="display:block">' + esc(p.boxLabel) + '</label>' +
+    '<textarea id="typed" class="short" rows="2" spellcheck="true"' + (s.result ? ' readonly' : '') + ' placeholder="Type it here.">' + esc(s.typed) + '</textarea>' +
+    '<div class="counts"><span class="cnt ' + cntCls(n, p) + '" id="typedCnt">' + cntTxt(n, p) + '</span></div>' +
+    '<p class="small" style="margin-top:8px">' + (isClass() ? 'Your professor reads what you type. You get <b>one check</b>, so read your line before you press the button.' : 'Practice: nothing is saved.') + '</p>';
+  if (!s.result){
+    h += '<div class="btnrow"><button type="button" class="btn blue" id="checkTyped"' + (n >= p.min ? '' : ' disabled') + '>Check my answer</button></div>';
+  } else {
+    var r = s.result;
+    h += '<div class="bigscore" style="font-size:26px">' + r.score + ' of 3 points</div><div class="checks">' +
+      r.list.map(function(c){ return '<div class="check ' + (c.ok ? 'pass' : 'fail') + '"><span class="ic">' + (c.ok ? '✅' : '✏️') + '</span><span>' + esc(c.label) + (c.extra ? '<br><span class="small">' + esc(c.extra) + '</span>' : '') + '</span></div>'; }).join('') + '</div>' +
+      '<details class="model"><summary>See one strong version</summary><p style="margin:.5em 0 0;font-size:21px">' + esc(p.model) + '</p><p class="small" style="margin:.3em 0 0">' + esc(p.modelWhy) + '</p></details>' +
+      thoughtHTML(p, r.score === 3 ? p.cloudPass : (r.list[0].ok ? p.cloudLong : p.cloudMissing)) +
+      '<div class="fb good"><b>✓ Checked.</b> ' + (isClass() ? 'Your line is saved for your professor.' : 'This is practice, so nothing is saved.') + '<span class="next">Press Next ➤</span></div>' +
+      (isClass() ? '' : '<p><button type="button" class="btn soft" id="retryTyped">↺ Try again (practice only)</button></p>');
+  }
+  return h;
+}
+function renderChoose(p, s){
+  var order = s.order || (s.order = shuffle(p.options.map(function(_, i){ return i; })));
+  var h = kindbar(p) + whereHTML(p) + jobHTML(p, s.step, s.done) + ctxHTML(p, s) +
+    '<div class="opts">' + order.map(function(ix, i){
+      var o = p.options[ix], mark = s.chosen[ix] ? (o.ok ? ' right' : ' wrong') : '';
+      var body = o.html ? o.html : (p.bold ? '<b>' + esc(o.t) + '</b>' : esc(o.t));
+      return '<button type="button" class="opt' + mark + '" data-opt="' + ix + '"' + (s.done ? ' disabled' : '') + '><span class="letter">' + 'ABCD'.charAt(i) + '</span><span>' + body + '</span></button>';
+    }).join('') + '</div>';
+  h += fbHTML(s.fb) + (s.done ? thoughtHTML(p, p.cloud) : '');
+  return h;
+}
+function pickCount(sel){ return Object.keys(sel).filter(function(k){ return sel[k]; }).length; }
+function renderSpot(p, s){
+  var sel = s.picks || (s.picks = {});
+  var n = pickCount(sel);
+  if (!s.done) s.step = n >= p.count ? (p.steps.length) : (p.steps.length - 1);
+  var first = p.fixedFirst ? '<div class="spotchip row locked"><span class="tflag">Topic 1</span>' + esc(p.fixedFirst) + '</div>' : '';
+  var h = kindbar(p) + whereHTML(p) + jobHTML(p, s.step, s.done) +
+    '<div class="sentcard"><div class="sentlabel">' + esc(p.label) + '</div><div class="spotgrid' + (p.listy ? ' rows' : '') + '" id="sent">' + first +
+    p.chips.map(function(c, i){
+      var cls = 'spotchip' + (p.listy ? ' row' : '') + (!s.done && sel[i] ? ' picked' : '') + (s.done ? (c.bad ? (p.topic ? ' istopic' : ' isbad') : ' isok') : '');
+      var flag = (s.done && c.bad && p.topic) ? '<span class="tflag">New topic</span>' : '';
+      return '<button type="button" class="' + cls + '" data-spot="' + i + '" aria-pressed="' + (sel[i] ? 'true' : 'false') + '"' + (s.done ? ' disabled' : '') + '>' + flag + (!s.done && sel[i] ? '✓ ' : '') + esc(c.t) + '</button>';
+    }).join('') + '</div>' +
+    '<div class="counts"><span class="cnt ' + (n ? 'now' : '') + '">Picked: ' + n + '</span><span class="cnt">To find: ' + p.count + '</span></div></div>';
+  if (!s.done) h += '<div class="btnrow"><button type="button" class="btn blue" id="checkSpot"' + (n ? '' : ' disabled') + '>Check my picks</button></div>';
+  h += fbHTML(s.fb);
+  if (s.done){
+    h += '<div class="why"><div class="tilehead">' + esc(p.whyHead || 'Why:') + '</div>' + p.chips.filter(function(c){ return c.bad; }).map(function(c){
+      return '<div class="whyrow"><b>' + esc(c.t) + '</b> ' + esc(c.why) + (c.fix ? ' Say <b>"' + esc(c.fix) + '."</b>' : '') + '</div>'; }).join('') + '</div>' + thoughtHTML(p, p.cloud);
+  }
+  return h;
+}
+function checkSpot(p, s){
+  var sel = s.picks, wrong = [], found = 0;
+  p.chips.forEach(function(c, i){ if (sel[i] && !c.bad) wrong.push(c); if (sel[i] && c.bad) found++; });
+  if (!wrong.length && found === p.count){ finish(p, s, 'You found all ' + p.count + '.'); render(); return; }
+  if (wrong.length) miss(s, '"' + esc(wrong[0].t) + '" is fine. ' + esc(wrong[0].why.replace(/^This one is fine\. /, '')) + ' Tap it to unpick it, then tap Check my picks again.', 'Not quite.', true);
+  else miss(s, 'You found ' + found + ' of ' + p.count + '. Look again, then tap Check my picks.', 'Not yet.', true);
+  render(); scrollSafe($('#fb'));
+}
+function renderEnd(){
+  var t = total();
+  return '<h1>Brightwater\'s emails get opened ✅</h1>' +
+    '<p class="lrow">Dana\'s new rule for the office: <b>the topic plus the one detail that matters</b> in the subject line, and <b>a greeting that fits the reader</b>.</p>' +
+    '<div class="bigscore">⭐ ' + t + ' of ' + MAXPTS + ' points</div>' +
+    '<p class="lrow"><b>Your 2 parts:</b></p>' +
+    '<div class="review">' + [0, 1].map(function(i){ var k = KINDS[i]; return '<div class="rv" style="border-left-color:' + k.edge + '"><div class="rvname">' + k.icon + ' ' + esc(k.name) + '</div><div class="rvex">' + esc(k.rule) + '</div></div>'; }).join('') + '</div>' +
+    '<div class="how"><b>One warning.</b> Urgent and Important work only when they are true. Use them once a month, not once a day.</div>' +
+    endStatus();
+}
+
+/* ================= INTERACTION ================= */
+function bind(p, s){
+  var lb = $('#listenBtn');
+  if (lb){
+    if (!('speechSynthesis' in window)) lb.style.display = 'none';
+    else lb.addEventListener('click', function(){
+      var parts = [];
+      if (p.type === 'learn'){ parts = $$('.lrow, .exrow, .rule, .job li, .how', $('#page')).map(function(e){ return e.innerText; }); }
+      else { parts = (p.steps || []).map(function(x, i){ return 'Step ' + (i + 1) + '. ' + x; }); if (p.note) parts.push(p.note); var se = $('#sent'); if (se) parts.push(se.innerText); }
+      speak(parts.join(' '));
+    });
+  }
+  if (p.type === 'build' && !s.done){
+    $$('[data-add]').forEach(function(b){ b.addEventListener('click', function(){ addTile(p, s, b); }); });
+    $$('[data-back]').forEach(function(b){ b.addEventListener('click', function(){ s.build = s.build.filter(function(x){ return x !== b.dataset.back; }); s.fb = null; render(); }); });
+    var cb = $('#checkBuild'); if (cb) cb.addEventListener('click', function(){ checkBuild(p, s); });
+    var cl = $('#clearBuild'); if (cl) cl.addEventListener('click', function(){ s.build = []; s.fb = null; render(); });
+  }
+  if (p.type === 'type'){
+    var ta = $('#typed');
+    ta.addEventListener('input', function(){
+      s.typed = ta.value; var n = words(ta.value); save();
+      var c = $('#typedCnt'); c.textContent = cntTxt(n, p); c.className = 'cnt ' + cntCls(n, p);
+      var ck = $('#checkTyped'); if (ck) ck.disabled = n < p.min;
+      stepMark(n >= p.min ? 3 : (n > 0 ? 2 : 1));
+    });
+    var ck = $('#checkTyped'); if (ck) ck.addEventListener('click', function(){ checkTyped(p, s); });
+    var rt = $('#retryTyped'); if (rt) rt.addEventListener('click', function(){ s.result = null; s.done = false; s.step = 2; s.points = 0; setPoints(false); render(); $('#typed').focus(); });
+  }
+  if (p.type === 'spot' && !s.done){
+    $$('[data-spot]').forEach(function(b){ b.addEventListener('click', function(){ var i = +b.dataset.spot; s.picks[i] = !s.picks[i]; s.fb = null; render(); }); });
+    var cs = $('#checkSpot'); if (cs) cs.addEventListener('click', function(){ checkSpot(p, s); });
+  }
+  if (p.type === 'choose' && !s.done){
+    $$('.opt').forEach(function(b){ b.addEventListener('click', function(){ tapOpt(p, s, +b.dataset.opt); }); });
+  }
+  var rs = $('#restart'); if (rs) rs.addEventListener('click', function(){ st = fresh(); setPoints(false); go(0); });
+  onClick('#goClass', function(){ st.view = 'signin'; st.form = {id:'', code:'', confirm:false, err:''}; render(); window.scrollTo(0, 0); });
+  onClick('#goPractice', function(){ st.cls.mode = 'practice'; go(1); });
+  onClick('#goLookup', function(){ st.view = 'lookup'; st.look = null; render(); window.scrollTo(0, 0); });
+  onClick('#toClass', function(){ var sec = st.cls.section; st = fresh(); st.cls.section = sec; setPoints(false); st.view = 'signin'; st.form = {id:'', code:'', confirm:false, err:''}; render(); window.scrollTo(0, 0); });
+  onClick('#retrySubmit', submitFinal);
+  onClick('#retryCode', function(){ var v = normalizeCode(($('#fixcode') || {}).value); if (v.length < 3) return; st.cls.code = v; st.cls.submitError = null; submitFinal(); });
+}
+function miss(s, html, prefix, noTry){ s.misses++; s.fb = {kind:'miss', html:'<b>✏️ ' + (prefix || 'Not that one.') + '</b> ' + html + (noTry ? '' : ' Try again.')}; }
+function finish(p, s, msg){
+  s.done = true; s.points = pointsFor(p, s.misses);
+  s.fb = {kind:'good', html:goodNext(msg) };
+  setPoints(true);
+}
+function addTile(p, s, btn){
+  if (busy) return;
+  var id = btn.dataset.add;
+  var ans = $('#answer');
+  var ph = ans.querySelector('.ph');
+  var dest = ans.lastElementChild && !ph ? ans.lastElementChild : ans;
+  btn.style.visibility = 'hidden';
+  busy = true;
+  flyTo(btn, dest, esc(btn.textContent), '', false).then(function(){ busy = false; s.build.push(id); s.fb = null; render(); });
+}
+function checkBuild(p, s){
+  var tileOf = function(id){ return p.bank.filter(function(b){ return b.id === id; })[0]; };
+  var ok;
+  if (p.anyOrder) ok = s.build.length === p.answer.length && p.answer.every(function(id){ return s.build.indexOf(id) >= 0; });
+  else ok = s.build.length === p.answer.length && s.build.every(function(id, i){ return id === p.answer[i]; });
+  if (ok){ finish(p, s, p.okMsg); render(); return; }
+  var decoy = s.build.map(tileOf).filter(function(b){ return b.decoy; })[0];
+  if (decoy) miss(s, esc(decoy.msg), 'Not yet.');
+  else if (s.build.length < p.answer.length){ s.fb = {kind:'note', html:'<b>👀 Almost.</b> Your list is missing some lines. Add the rest, then tap Check my list.'}; }
+  else miss(s, esc(p.orderMsg), 'Not yet.');
+  render(); scrollSafe($('#fb'));
+}
+function stepMark(step){
+  $$('.steps li').forEach(function(li, i){
+    var n = i + 1; li.className = n < step ? 'did' : (n === step ? 'now' : '');
+    var num = li.querySelector('.n'); if (num) num.textContent = n < step ? '✓' : n;
+  });
+}
+function checkTyped(p, s){
+  var t = $('#typed').value; s.typed = t; var n = words(t);
+  var list = p.checks.map(function(c){
+    if (c.len){ var ok = n <= p.limit && n >= p.min; return {label:c.label, ok:ok, extra:'Yours: ' + n + ' word' + (n === 1 ? '' : 's') + '.'}; }
+    return {label:c.label, ok:!!c.test(t)};
+  });
+  var score = list.filter(function(c){ return c.ok; }).length;
+  s.result = {list:list, score:score}; s.done = true; s.points = score; s.step = 4;
+  setPoints(true); render();
+  var bs = $('.bigscore'); if (bs){ var topH = ($('.top') || {}).offsetHeight || 60; window.scrollBy({top:bs.getBoundingClientRect().top - topH - 12, behavior:reduced() ? 'auto' : 'smooth'}); }
+}
+function tapOpt(p, s, ix){
+  var o = p.options[ix]; s.chosen[ix] = true;
+  if (o.ok){ finish(p, s, o.msg); render(); return; }
+  miss(s, esc(o.msg)); render(); scrollSafe($('#fb'));
+}
+
+/* ================= NAV ================= */
+function canNext(){
+  var p = PAGES[st.i], s = st.pg[st.i];
+  if (p.type === 'start' || p.type === 'learn') return true;
+  if (p.type === 'end') return false;
+  return s.done;
+}
+function nav(){
+  var p = PAGES[st.i];
+  $('#back').disabled = st.i === 0;
+  var nx = $('#next');
+  nx.disabled = !canNext();
+  nx.style.visibility = (p.type === 'end' || (p.type === 'start' && !st.cls.mode)) ? 'hidden' : 'visible';
+  nx.textContent = p.type === 'start' ? 'Start ➤' : (p.type === 'learn' ? 'Start the exercises ➤' : 'Next ➤');
+  $('#barFill').style.width = Math.round(100 * st.i / (PAGES.length - 1)) + '%';
+  $('#pcount').textContent = 'Page ' + (st.i + 1) + ' of ' + PAGES.length;
+  $('#navmsg').textContent = canNext() ? '' : (p.type === 'end' ? '' : 'Finish the job in the blue box first.');
+}
+function go(i){
+  if (window.speechSynthesis) window.speechSynthesis.cancel();
+  st.i = i; render(); window.scrollTo(0, 0);
+  if (PAGES[i].type === 'end' && isClass()) submitFinal();
+}
+$('#next').addEventListener('click', function(){ if (canNext() && st.i < PAGES.length - 1) go(st.i + 1); });
+$('#back').addEventListener('click', function(){ if (st.i > 0) go(st.i - 1); });
+
+if (restore()){ setPoints(false); go(st.i); } else { setPoints(false); go(0); }
+window.__lio = {st:function(){ return st; }, go:go, PAGES:PAGES, MAXPTS:MAXPTS, CONFIG:CONFIG};
+})();
+</script>
+</body>
+</html>
